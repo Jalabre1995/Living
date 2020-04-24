@@ -1,29 +1,42 @@
 import React from "react";
+import Form from "react-bootstrap/Form";
+import Button from "react-bootstrap/Button";
 
-function Form(props) {
+function Forms(props) {
   return (
     <div>
-      <form onSubmit={props.handleSubmit}>
-        <input
-          type="email"
-          name="email"
-          palceholder="Email"
-          value={props.email}
-          onChnage={props.handleChange}
-          required
-        />
-        <input
-          type="password"
-          name="password"
-          placeholder="Password"
-          value={props.password}
-          onChnage={props.handleChange}
-          required
-        />
-        <button type="submit">Login</button>
-      </form>
+      <Form onSubmit={props.handleSubmit}>
+        <Form.Group controlId="formBasicEmail">
+          <Form.Label>Email address</Form.Label>
+          <Form.Control
+            type="email"
+            placeholder="Enter email"
+            value={props.email}
+            onChnage={props.handleChange}
+          />
+          <Form.Text className="text-muted">
+            We'll never share your email with anyone else.
+          </Form.Text>
+        </Form.Group>
+
+        <Form.Group controlId="formBasicPassword">
+          <Form.Label>Password</Form.Label>
+          <Form.Control
+            type="password"
+            placeholder="Password"
+            value={props.password}
+            onChnage={props.handleChange}
+          />
+        </Form.Group>
+        <Form.Group controlId="formBasicCheckbox">
+          <Form.Check type="checkbox" label="Check me out" />
+        </Form.Group>
+        <Button variant="primary" type="submit">
+          Submit
+        </Button>
+      </Form>
     </div>
   );
 }
 
-export default Form;
+export default Forms;

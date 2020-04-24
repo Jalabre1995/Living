@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import Form from "../Components/auth/Form";
+import Forms from "../Components/auth/Form";
 import axios from "axios";
 
 export default class Login extends Component {
@@ -45,7 +45,7 @@ export default class Login extends Component {
   render() {
     return (
       <div>
-        <Form
+        <Forms
           handleSubmit={this.handleSubmit}
           handleChange={this.handleChange}
           password={this.state.password}
