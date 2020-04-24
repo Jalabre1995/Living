@@ -1,0 +1,9 @@
+body{
+    background-color: lightskyblue;
+    text-align: center;
+    padding-top: 110px;
+}
+img:hover{
+    height: 205px;
+    width: 205px;
+}
