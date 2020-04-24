@@ -1,3 +1,4 @@
+
 import React, {Component} from 'react';
 import './css/Home.css';
 import House from './images/home.png'
@@ -44,3 +45,4 @@ export default class Home extends Component {
         )
     }
 }
+
