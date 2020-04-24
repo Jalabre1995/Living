@@ -4,14 +4,15 @@ import Button from "react-bootstrap/Button";
 
 function Forms(props) {
   return (
-    <div>
+    <div className="container">
       <Form onSubmit={props.handleSubmit}>
         <Form.Group controlId="formBasicEmail">
           <Form.Label>Email address</Form.Label>
           <Form.Control
+            className="form"
             type="email"
             placeholder="Enter email"
-            value={props.email}
+            //value={props.email}
             onChnage={props.handleChange}
           />
           <Form.Text className="text-muted">
@@ -22,17 +23,16 @@ function Forms(props) {
         <Form.Group controlId="formBasicPassword">
           <Form.Label>Password</Form.Label>
           <Form.Control
+            className="form"
             type="password"
             placeholder="Password"
-            value={props.password}
+            // value={props.password}
             onChnage={props.handleChange}
           />
         </Form.Group>
-        <Form.Group controlId="formBasicCheckbox">
-          <Form.Check type="checkbox" label="Check me out" />
-        </Form.Group>
+
         <Button variant="primary" type="submit">
-          Submit
+          Login
         </Button>
       </Form>
     </div>
