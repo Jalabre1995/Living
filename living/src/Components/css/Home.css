@@ -1,0 +1,20 @@
+body{
+    background-color: lightskyblue;
+    text-align: center;
+    padding-top: 110px;
+}
+img:hover{
+    height: 205px;
+    width: 205px;
+}
+.header{
+    font-family: 'Fredoka One', cursive;
+    letter-spacing: 2px;
+}
+.quote{
+    font-family: 'Courgette', cursive;
+    font-size: 25px;
+    font-weight: bold;
+    margin-bottom: 30px;
+}
+@import url('https://fonts.googleapis.com/css2?family=Courgette&family=Fredoka+One&display=swap');
