@@ -8,11 +8,14 @@
     "@testing-library/user-event": "^7.2.1",
     "axios": "^0.19.2",
 <<<<<<< HEAD
+<<<<<<< HEAD
     "radium": "^0.26.0",
     "mongoose": "^5.9.10",
 
     "bootstrap": "^4.4.1",
 
+=======
+>>>>>>> bc8171c4dbd6014cee0e47d7fbb04a7e432806ff
 =======
 >>>>>>> bc8171c4dbd6014cee0e47d7fbb04a7e432806ff
 
