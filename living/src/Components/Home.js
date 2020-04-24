@@ -1,3 +1,4 @@
+
 import React, {Component} from 'react';
 import House from './images/home.png'
 import { Button } from "react-mdl";
@@ -5,23 +6,20 @@ import { bounceInDown, fadeIn } from "react-animations";
 import Radium, {StyleRoot} from 'radium';
 import './css/Home.css';
 
+
 const styles = {
-
-    bounceInDown : {
-
-        animation : 'x 2s',
-        animationName : Radium.keyframes(bounceInDown, "bounceInDown")
-
-    },
-    fadeIn : {
-        animation : 'x 2s',
-        animationName : Radium.keyframes(fadeIn, "fadeIn")
-    }
-
-}
-
+  bounceInDown: {
+    animation: "x 2s",
+    animationName: Radium.keyframes(bounceInDown, "bounceInDown"),
+  },
+  fadeIn: {
+    animation: "x 2s",
+    animationName: Radium.keyframes(fadeIn, "fadeIn"),
+  },
+};
 
 export default class Home extends Component {
+
  
 
     render() {
@@ -43,5 +41,5 @@ export default class Home extends Component {
             </div>
         )
     }
-}
 
+}
