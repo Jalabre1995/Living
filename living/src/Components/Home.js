@@ -6,7 +6,6 @@ import { bounceInDown, fadeIn } from "react-animations";
 import Radium, {StyleRoot} from 'radium';
 import './css/Home.css';
 
-
 const styles = {
 
     bounceInDown : {
