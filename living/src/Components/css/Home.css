@@ -3,18 +3,89 @@ body{
     text-align: center;
     padding-top: 110px;
 }
+<<<<<<< HEAD
 img:hover{
-    height: 205px;
-    width: 205px;
+    transform: rotate(180deg);
 }
+=======
+>>>>>>> bc8171c4dbd6014cee0e47d7fbb04a7e432806ff
 .header{
     font-family: 'Fredoka One', cursive;
     letter-spacing: 2px;
+    text-shadow: 2px 2px #000000;
+    text-transform: uppercase;
+    transition-duration: 1s;
+    animation: fadeIn ease 3s;
+        -webkit-animation: fadeIn ease 5s;
+        -moz-animation: fadeIn ease 5s;
+        -o-animation: fadeIn ease 5s;
+        -ms-animation: fadeIn ease 5s;
+      }
+.header:hover{
+    letter-spacing: 8px;
 }
-.quote{
+
+      @keyframes fadeIn {
+        0% {
+          opacity:0;
+        }
+        100% {
+          opacity:1;
+        }
+      }
+      
+      @-moz-keyframes fadeIn {
+        0% {
+          opacity:0;
+        }
+        100% {
+          opacity:1;
+        }
+        
+      }
+
+      @-webkit-keyframes fadeIn {
+        0% {
+          opacity:0;
+        }
+        100% {
+          opacity:1;
+        }
+      }
+      
+      @-o-keyframes fadeIn {
+        0% {
+          opacity:0;
+        }
+        100% {
+          opacity:1;
+        }
+      }
+      
+      @-ms-keyframes fadeIn {
+        0% {
+          opacity:0;
+        }
+        100% {
+          opacity:1;
+      }
+
+    }
+.fade{
     font-family: 'Courgette', cursive;
     font-size: 25px;
     font-weight: bold;
-    margin-bottom: 30px;
+    margin-bottom: 25px;
+    animation: fadeIn ease 7s;
+    -webkit-animation: fadeIn ease 7s;
+    -moz-animation: fadeIn ease 7s;
+    -o-animation: fadeIn ease 7s;
+    -ms-animation: fadeIn ease 7s;
 }
+button:hover{
+    opacity: 0.7;
+    font-family: 'Courgette', cursive;
+    font-size: 20px;
+}
+
 @import url('https://fonts.googleapis.com/css2?family=Courgette&family=Fredoka+One&display=swap');

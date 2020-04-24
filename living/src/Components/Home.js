@@ -1,7 +1,29 @@
+
 import React, {Component} from 'react';
-import './css/Home.css';
 import House from './images/home.png'
 import { Button } from "react-mdl";
+import { bounceInDown, fadeIn } from "react-animations";
+import Radium, {StyleRoot} from 'radium';
+<<<<<<< HEAD
+import './css/Home.css';
+=======
+>>>>>>> bc8171c4dbd6014cee0e47d7fbb04a7e432806ff
+
+const styles = {
+
+    bounceInDown : {
+
+        animation : 'x 2s',
+        animationName : Radium.keyframes(bounceInDown, "bounceInDown")
+
+    },
+    fadeIn : {
+        animation : 'x 2s',
+        animationName : Radium.keyframes(fadeIn, "fadeIn")
+    }
+
+}
+
 
 export default class Home extends Component {
  
@@ -10,16 +32,33 @@ export default class Home extends Component {
         return(
             <div className="home">
 
-            <img src={House} alt="home" height="200px" width="200px"/>
+            <StyleRoot>
+<<<<<<< HEAD
+
+            <img src={House} alt="home" height="200px" width="200px" style={styles.bounceInDown}/>
+
+            </StyleRoot>
             
-            <h1 className="header">Living.js</h1>
+            <h1 className="header" stye={styles.fadeIn}>Living.js</h1>
 
-            <p className="quote">Welcome to the Application that will help you find a better place to live!</p>
+            <p className="fade" >Welcome to the Application that will help you find the best place to live!</p>
 
-            <Button raised colored className="btn">Begin Search</Button>
+            <Button raised colored className="fade">Begin Search</Button>
+=======
 
+            <img src={House} alt="home" height="200px" width="200px" style={styles.bounceInDown}/>
+
+            </StyleRoot>
+            
+            <h1 className="header" stye={styles.fadeIn}>Living.js</h1>
+
+>>>>>>> bc8171c4dbd6014cee0e47d7fbb04a7e432806ff
+            <p className="fade" >Welcome to the Application that will help you find a better place to live!</p>
+
+            <Button raised colored className="fade hover">Begin Search</Button>
 
             </div>
         )
     }
 }
+
