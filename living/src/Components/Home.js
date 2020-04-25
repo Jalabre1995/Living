@@ -31,11 +31,11 @@ export default class Home extends Component {
 
             </StyleRoot>
             
-            <h1 className="header" stye={styles.fadeIn}>Living.js</h1>
+            <h1 className="header" stlye={styles.fadeIn}>Living.js</h1>
 
-            <p className="fade" >Welcome to the Application that will help you find the best place to live!</p>
+            <p className="fade" style={styles.fadeIn} >Welcome to the Application that will help you find the best place to live!</p>
 
-            <Button raised colored className="fade">Begin Search</Button>
+            <Button raised colored className="fade" style={styles.fadeIn}>Begin Search</Button>
 
             </div>
         )
