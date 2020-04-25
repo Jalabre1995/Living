@@ -1,4 +1,3 @@
-
 import React, {Component} from 'react';
 import House from './images/home.png'
 import { Button } from "react-mdl";
