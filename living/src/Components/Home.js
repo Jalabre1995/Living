@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
-import House from './images/home.png'
-import { Button } from "react-mdl";
+import House from './images/home.png';
+import { Button } from "react-bootstrap";
 import { bounceInDown, fadeIn } from "react-animations";
 import Radium, {StyleRoot} from 'radium';
 import './css/Home.css';
@@ -27,17 +27,18 @@ export default class Home extends Component {
 
             <StyleRoot>
 
-            <img src={House} alt="home" height="200px" width="200px" style={styles.bounceInDown}/>
+            <img src={House} alt="home" height="200px" width="200px" style={styles.bounceInDown} className="house"/>
 
             </StyleRoot>
             
-            <h1 className="header" stlye={styles.fadeIn}>Living.js</h1>
+            <h1 className="header">Living.js</h1>
 
-            <p className="fade" style={styles.fadeIn} >Welcome to the Application that will help you find the best place to live!</p>
+            <p className="font">Welcome to the Application that will help you find the best place to live!</p>
 
-            <Button raised colored className="fade" style={styles.fadeIn}>Begin Search</Button>
+            <Button className="font btn" variant="danger">Begin Search</Button>
 
             </div>
+
         )
     }
 
