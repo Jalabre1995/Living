@@ -8,6 +8,7 @@
     "@testing-library/user-event": "^7.2.1",
     "axios": "^0.19.2",
     "bootstrap": "^4.4.1",
+    "citysdk": "^2.1.0",
     "mongoose": "^5.9.10",
     "radium": "^0.26.0",
     "react": "^16.13.1",
