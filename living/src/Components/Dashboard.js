@@ -1,7 +1,15 @@
 import React, {Component} from 'react';
 import {Navbar, Form, FormControl, Button, Nav, Col, Row, Container, Jumbotron, Card, ListGroup} from 'react-bootstrap';
 import House from './images/home.png';
+import York from './images/yorkTown.jpg';
+import City from './images/city.jpg';
+import Bright from './images/Brightlights.jpg';
+import Nice from './images/niceCity.jpg';
+import Seattle from './images/Seattle.jpg'
 import './css/Dashboard.css';
+
+let cityList = [York,City,Bright,Nice,Seattle];
+let cityLoad = cityList[Math.floor(Math.random() * cityList.length)];
 
 export default class Dashboard extends Component{
 
@@ -49,14 +57,11 @@ export default class Dashboard extends Component{
 
                         <Col sm="12">
                         
-                            <Card>
-                                <Card.Img variant="top" src="holder.js/100px180" />
-                                <Card.Body>
-                                <Card.Text>
-                                    Some quick example text to build on the card title and make up the bulk
-                                    of the card's content.
-                                </Card.Text>
-                                </Card.Body>
+                            <Card className="bg-dark text-white">
+                                <Card.Img src={cityLoad} alt="Card image" height="600px" width="1000px"/>
+                                <Card.ImgOverlay>
+                                    <Card.Title><div className="title">Living.js</div></Card.Title>
+                                </Card.ImgOverlay>
                             </Card>
 
                         </Col>

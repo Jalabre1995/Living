@@ -7,4 +7,14 @@
     font-weight: bold;
     font-family: 'Fredoka One', cursive;
 }
+.title{
+    font-size: 150px;
+    text-align: center;
+    font-family: "Fredoka One", cursive;
+    padding-top: 200px;
+}
+.title:hover{
+    letter-spacing: 20px;
+    transition-duration: 2s;
+}
 @import url('https://fonts.googleapis.com/css2?family=Courgette&family=Fredoka+One&display=swap');
