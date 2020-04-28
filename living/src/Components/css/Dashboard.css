@@ -2,3 +2,9 @@
     margin-top: 0px;
     padding-top: 0px;
 }
+.list1{
+    background-color: #f44336;
+    font-weight: bold;
+    font-family: 'Fredoka One', cursive;
+}
+@import url('https://fonts.googleapis.com/css2?family=Courgette&family=Fredoka+One&display=swap');
