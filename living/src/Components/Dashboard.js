@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import {Navbar, Form, FormControl, Button, Nav, Col, Row, Container, Jumbotron, Card, ListGroup, Badge} from 'react-bootstrap';
+import {Navbar, Form, FormControl, Button, Nav, Col, Row, Container, Jumbotron, Card, ListGroup} from 'react-bootstrap';
 import House from './images/home.png';
 import './css/Dashboard.css';
 
