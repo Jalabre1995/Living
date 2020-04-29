@@ -1,0 +1,22 @@
+.dashboard{
+    margin-top: 0px;
+    padding-top: 0px;
+}
+.list1{
+    background-color: #f44336;
+    font-weight: bold;
+    font-family: 'Fredoka One', cursive;
+}
+.title{
+    font-size: 150px;
+    text-align: center;
+    font-family: "Fredoka One", cursive;
+    padding-top: 200px;
+    text-shadow: -2px 0  #8750b4, 0 2px  #8750b4, 2px 0  #8750b4, 0 -2px  #8750b4;
+    color:  whitesmoke;
+}
+.title:hover{
+    letter-spacing: 20px;
+    transition-duration: 2s;
+}
+@import url('https://fonts.googleapis.com/css2?family=Courgette&family=Fredoka+One&display=swap');
