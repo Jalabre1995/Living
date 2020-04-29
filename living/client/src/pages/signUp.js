@@ -23,7 +23,7 @@ export default class Login extends Component {
     event.preventDefault();
     const { email, password } = this.state;
     axios({
-      url: "/authentication/login",
+      url: "/authentication/signup",
       method: "POST",
 
       user: {
@@ -32,10 +32,10 @@ export default class Login extends Component {
       },
     })
       .then((response) => {
-        console.log("data:", response.data);
+        console.log("data", response.data);
       })
       .catch((error) => {
-        console.log("Error:", error.response);
+        console.log("Error", error.response);
       });
   };
 
