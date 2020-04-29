@@ -12,6 +12,8 @@
     text-align: center;
     font-family: "Fredoka One", cursive;
     padding-top: 200px;
+    text-shadow: -2px 0  #8750b4, 0 2px  #8750b4, 2px 0  #8750b4, 0 -2px  #8750b4;
+    color:  whitesmoke;
 }
 .title:hover{
     letter-spacing: 20px;

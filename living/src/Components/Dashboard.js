@@ -1,14 +1,19 @@
 import React, {Component} from 'react';
-import {Navbar, Form, FormControl, option, Button, Nav, Col, Row, Container, Jumbotron, Card, ListGroup} from 'react-bootstrap';
+import {Navbar, Form, FormControl, Button, Nav, Col, Row, Container, Jumbotron, Card, ListGroup} from 'react-bootstrap';
 import House from './images/home.png';
 import York from './images/yorkTown.jpg';
 import City from './images/city.jpg';
 import Bright from './images/Brightlights.jpg';
 import Nice from './images/niceCity.jpg';
-import Seattle from './images/Seattle.jpg'
+import Seattle from './images/Seattle.jpg';
+import Golden from './images/goldenGate.jpg';
+import MetLife from './images/metLife.jpg';
+import Coast from './images/coast.jpg';
+import Mountain from './images/mountain.jpg';
+import View from './images/view.jpg';
 import './css/Dashboard.css';
 
-let cityList = [York,City,Bright,Nice,Seattle];
+let cityList = [York,City,Bright,Nice,Seattle,Golden,Coast,MetLife,Mountain,View];
 let cityLoad = cityList[Math.floor(Math.random() * cityList.length)];
 
 export default class Dashboard extends Component{
@@ -37,9 +42,9 @@ export default class Dashboard extends Component{
 
                         <Nav.Link href="/">Home</Nav.Link>
 
-                        <Nav.Link href="/login">Login</Nav.Link>
+                        <Nav.Link href="/profile">Profile</Nav.Link>
 
-                        <Nav.Link href=""></Nav.Link>
+                        <Nav.Link href="/login">Login</Nav.Link>
                    </Nav>
 
                     <Form inline>
