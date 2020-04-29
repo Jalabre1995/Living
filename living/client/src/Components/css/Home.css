@@ -1,0 +1,40 @@
+body{
+  background-image: linear-gradient(
+    -145deg,
+    #801ecf,
+    #401374,
+    #8750b4,
+    #581399
+  );
+}
+.home{
+  padding-top: 110px;
+  padding-bottom: 50px;
+  text-align: center;
+}
+.form {
+  background-color: transparent;
+  box-shadow: 0.5rem 0.3rem 1.5rem #47498c, -0.5rem -0.5rem 1.5rem, #5d5fb6;
+  border-radius: 2rem;
+}
+.house:hover{
+    transform: rotate(180deg);
+}
+.header{
+    font-family: 'Fredoka One', cursive;
+    letter-spacing: 2px;
+    text-shadow: 2px 2px #000000;
+    text-transform: uppercase;
+      }
+.header:hover{
+    letter-spacing: 15px;
+    transition-duration: 1s;
+}
+.font {
+  font-family: "Courgette", cursive;
+  font-size: 25px;
+  font-weight: bold;
+  margin-bottom: 25px;
+}
+@import url('https://fonts.googleapis.com/css2?family=Courgette&family=Fredoka+One&display=swap');
+
