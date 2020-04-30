@@ -19,8 +19,8 @@ function Forms(props) {
             We'll never share your email with anyone else.
           </Form.Text>
         </Form.Group>
- 
-       <Form.Group controlId="formBasicPassword">
+
+        <Form.Group controlId="formBasicPassword">
           <Form.Label>Password</Form.Label>
           <Form.Control
             className="form"
@@ -29,11 +29,11 @@ function Forms(props) {
             // value={props.password}
             onChnage={props.handleChange}
           />
-        </Form.Group> 
+        </Form.Group>
 
-         <Button variant="primary" type="submit">
+        <Button variant="primary" type="submit">
           Login
-        </Button> 
+        </Button>
       </Form>
     </div>
   );
