@@ -29,7 +29,7 @@
     text-align: center;
     font-family: 'Modak', cursive;
     margin-top: 30px;
-    margin-bottom: 90px;
+    margin-bottom: 70px;
     font-size: 70px;
     color: #401374;
     text-shadow: -2px 0  #000000, 0 2px  #000000, 2px 0  #000000, 0 -2px  #000000;
@@ -49,8 +49,10 @@
 .percentages{
     text-align: center;
     font-size: 50px;
-    font-family: 'Modak', cursive;
+    font-family: 'Bitter';
+    font-weight: bold;
     margin-bottom: 75px;
+    text-shadow: -1px 0  #000000, 0 1px  #000000, 1px 0  #000000, 0 -1px  #000000;
 }
 .transformUp{
     transform : rotate(270deg);
@@ -68,5 +70,9 @@
 .down{
     color: red;
 }
+.darkgray{
+    background-color: darkgray;
+    padding : 30px;
+}
 @import url('https://fonts.googleapis.com/css2?family=Courgette&family=Fredoka+One&display=swap');
-@import url("https://fonts.googleapis.com/css2?family=ABeeZee&family=Modak&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=ABeeZee&family=Modak&Bitter&display=swap");
