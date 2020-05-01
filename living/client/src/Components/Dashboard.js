@@ -41,11 +41,11 @@ export default class Dashboard extends Component{
 
                     <Nav className="mr-auto">
 
-                        <Nav.Link href="/">Home</Nav.Link>
+                        <Nav.Link href="/home">Home</Nav.Link>
 
                         <Nav.Link href="/profile">Profile</Nav.Link>
 
-                        <Nav.Link href="/login">Login</Nav.Link>
+                        <Nav.Link href="/">Login</Nav.Link>
                    </Nav>
 
                     <Form inline>
@@ -169,7 +169,7 @@ export default class Dashboard extends Component{
                         
                             <Card className="bg-dark text-white">
 
-                                <Card.Img src={cityLoad} alt="Card image" height="500px" width="1000px"/>
+                                <Card.Img src={cityLoad} alt="Card image" height="550px" width="1000px"/>
 
                                 <Card.ImgOverlay>
 
@@ -239,6 +239,8 @@ export default class Dashboard extends Component{
 
                                     </Row>
 
+                                    <div className="darkgray">
+
                                     <Row>
 
                                         <Col lg="4" className="sub">
@@ -293,13 +295,13 @@ export default class Dashboard extends Component{
 
                                         <Col sm="4" className="down">
                                         
-                                            12.5%%
+                                            12.5%
                                         
                                         </Col>
 
                                         <Col sm="4" className="up">
                                         
-                                            1.8%%
+                                            1.8%
                                         
                                         </Col>
 
@@ -352,6 +354,8 @@ export default class Dashboard extends Component{
                                         </Col>
 
                                     </Row>
+
+                                    </div>
 
                                 </Container>
                                 
