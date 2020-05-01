@@ -21,7 +21,7 @@ router.post("/signin", (req, res, next) => {
   passport.authenticate("local-signin", function (error, user, info) {
     if (error) {
       return res.status(500).json({
-        message: error || "Inter server error ",
+        message: error || "Internal server error ",
       });
     }
 
