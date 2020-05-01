@@ -24,11 +24,5 @@ export default {
 
         
     },
-
-    ///Detailed Tables 
-    getAllCities: function() {
-
-        return axios.get ('pi.census.gov/data/2018/acs/acs1?get=NAME,group(B01001)&for=us:1&key=24928c7723ca0b57b5f1ae01d93d81ea4d28b849')
-    }
     
 };

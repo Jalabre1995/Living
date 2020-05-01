@@ -11,7 +11,7 @@ mongoose.connect(
 const citySeed = [
     {
         city:'',
-        costofLiving: '',
+        costOfLiving: '',
         housing: '',
         safety: '',
         healthCare:'',
