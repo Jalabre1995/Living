@@ -3,22 +3,30 @@ const router = express.Router();
 const passport = require("../passport");
 
 router.post("/signup", (req, res, next) => {
+  console.log(req.body);
+
   passport.authenticate("local-signup", function (error, user, info) {
     if (error) {
       return res.status(500).json({
-        message: "Ooops",
-        error: error.message || "Inter server error ",
+        message: error || "Ooops something happened!",
       });
     }
 
-    return res.json({
-      user,
-    });
+    return res.json(user);
   })(req, res, next);
+  console.log(req.body);
 });
 
-router.post("/signin", function (req, res, next) {
-  res.send("respond ");
+router.post("/signin", (req, res, next) => {
+  passport.authenticate("local-signin", function (error, user, info) {
+    if (error) {
+      return res.status(500).json({
+        message: error || "Inter server error ",
+      });
+    }
+
+    return res.json(user);
+  })(req, res, next);
 });
 
 module.exports = router;

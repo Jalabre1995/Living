@@ -2,10 +2,10 @@ const Strategy = require("passport-local").Strategy;
 const User = require("../models/user");
 
 const bcrypt = require("bcryptjs");
-const salt = bcrypt.genSaltSync(10);
+//const salt = bcrypt.genSaltSync(10);
 
-const localStrategy = new Strategy({ usernameField: "email" }, function (
-  username,
+const loginStrategy = new Strategy({ usernameField: "email" }, function (
+  email,
   password,
   done
 ) {
@@ -15,8 +15,8 @@ const localStrategy = new Strategy({ usernameField: "email" }, function (
       if (err) {
         return done(err, null);
       }
-      if (user) {
-        return done("user already exits", null);
+      if (!user) {
+        return done("No user found ", null);
       }
       const isPasswordValid = bcrypt.compareSync(password, user.password);
       if (!isPasswordValid) {
@@ -26,4 +26,4 @@ const localStrategy = new Strategy({ usernameField: "email" }, function (
     });
 });
 
-module.exports = localStrategy;
+module.exports = loginStrategy;
