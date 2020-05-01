@@ -1,16 +1,17 @@
 import React, {Component} from 'react';
 import {Navbar, Form, FormControl, Button, Nav, Col, Row, Container, Jumbotron, Card, ListGroup} from 'react-bootstrap';
-import House from './images/home.png';
-import York from './images/yorkTown.jpg';
-import City from './images/city.jpg';
-import Bright from './images/Brightlights.jpg';
-import Nice from './images/niceCity.jpg';
-import Seattle from './images/Seattle.jpg';
-import Golden from './images/goldenGate.jpg';
-import MetLife from './images/metLife.jpg';
-import Coast from './images/coast.jpg';
-import Mountain from './images/mountain.jpg';
-import View from './images/view.jpg';
+import House from './images/homeNew.png';
+import York from './images/yorkTownNew.jpg';
+import City from './images/cityNew.jpg';
+import Bright from './images/BrightlightsNew.jpg';
+import Nice from './images/niceCityNew.jpg';
+import Seattle from './images/SeattleNew.jpg';
+import Golden from './images/goldenGateNew.jpg';
+import MetLife from './images/metLifeNew.jpg';
+import Coast from './images/coastNew.jpg';
+import Mountain from './images/mountainNew.jpg';
+import View from './images/viewNew.jpg';
+import Arrow from './images/arrowNew.png';
 import './css/Dashboard.css';
 
 let cityList = [York,City,Bright,Nice,Seattle,Golden,Coast,MetLife,Mountain,View];
@@ -40,11 +41,11 @@ export default class Dashboard extends Component{
 
                     <Nav className="mr-auto">
 
-                        <Nav.Link href="/">Home</Nav.Link>
+                        <Nav.Link href="/home">Home</Nav.Link>
 
                         <Nav.Link href="/profile">Profile</Nav.Link>
 
-                        <Nav.Link href="/login">Login</Nav.Link>
+                        <Nav.Link href="/">Login</Nav.Link>
                    </Nav>
 
                     <Form inline>
@@ -167,10 +168,15 @@ export default class Dashboard extends Component{
                         <Col sm="12">
                         
                             <Card className="bg-dark text-white">
-                                <Card.Img src={cityLoad} alt="Card image" height="600px" width="1000px"/>
+
+                                <Card.Img src={cityLoad} alt="Card image" height="300px" width="800px"/>
+
                                 <Card.ImgOverlay>
+
                                     <Card.Title><div className="title">Living.js</div></Card.Title>
+
                                 </Card.ImgOverlay>
+
                             </Card>
 
                         </Col>
@@ -186,14 +192,23 @@ export default class Dashboard extends Component{
                         <Col sm="2">
 
                             <Card style={{ width: '18rem' }}>
+
                                 <ListGroup variant="flush">
+
                                     <ListGroup.Item className="list1">Past Searches</ListGroup.Item>
+
                                     <ListGroup.Item>Miami</ListGroup.Item>
+
                                     <ListGroup.Item>Houston</ListGroup.Item>
+
                                     <ListGroup.Item>Las Vegas</ListGroup.Item>
+
                                     <ListGroup.Item>Seattle</ListGroup.Item>
+
                                     <ListGroup.Item>Washington</ListGroup.Item>
+
                                 </ListGroup>
+
                             </Card>
 
                         </Col>
@@ -201,14 +216,149 @@ export default class Dashboard extends Component{
                         <Col sm="10">
 
                             <Jumbotron>
-                                <h1>Welcome!</h1>
-                                <p>
-                                    This is a simple hero unit, a simple jumbotron-style component for calling
-                                    extra attention to featured content or information.
-                                </p>
-                                <p>
-                                    <Button variant="primary">Learn more</Button>
-                                </p>
+
+                                <Container className="output">
+
+                                    <Row>
+
+                                        <Col sm="12" className="introSentence">
+                                        
+                                            Living in "new city", your new salary will be estimated at about...
+                                        
+                                        </Col>
+
+                                    </Row>
+
+                                    <Row>
+
+                                        <Col sm="12" className="salary">
+                                        
+                                            "$123,000"
+                                        
+                                        </Col>
+
+                                    </Row>
+
+                                    <div className="darkgray">
+
+                                    <Row>
+
+                                        <Col lg="4" className="sub">
+                                        
+                                            Living Cost
+
+                                        </Col>
+
+                                        <Col lg="4" className="sub">
+                                        
+                                            Housing
+                                        
+                                        </Col>
+
+                                        <Col lg="4" className="sub">
+                                        
+                                            Healthcare
+                                        
+                                        </Col>
+
+                                    </Row>
+
+                                    <Row className="arrows">
+
+                                        <Col sm="4">
+
+                                            <img src={Arrow} alt="arrow" className="transformUp"/>
+
+                                        </Col>
+
+                                        <Col sm="4">
+
+                                            <img src={Arrow} alt="arrow" className="transformDown"/>
+
+                                        </Col>
+
+                                        <Col sm="4">
+
+                                            <img src={Arrow} alt="arrow" className="transformUp"/>
+
+                                        </Col>
+
+                                    </Row>
+
+                                    <Row className="percentages">
+
+                                        <Col sm="4" className="up">
+                                        
+                                            35.4%
+                                        
+                                        </Col>
+
+                                        <Col sm="4" className="down">
+                                        
+                                            12.5%
+                                        
+                                        </Col>
+
+                                        <Col sm="4" className="up">
+                                        
+                                            1.8%
+                                        
+                                        </Col>
+
+                                    </Row>
+
+                                    <Row>
+
+                                        <Col sm="6" className="sub">
+                                        
+                                            Eductaion
+                                        
+                                        </Col>
+
+                                        <Col sm="6" className="sub">
+                                        
+                                            Economy
+
+                                        </Col>
+
+                                    </Row>
+
+                                    <Row className="arrows">
+
+                                        <Col sm="6">
+                                        
+                                            <img src={Arrow} alt="arrow" className="transformDown"/>
+
+                                        </Col>
+
+                                        <Col sm="6">
+                                        
+                                            <img src={Arrow} alt="arrow" className="transformUp"/>
+                                        
+                                        </Col>
+
+                                    </Row>
+
+                                    <Row className="percentages">
+
+                                        <Col sm="6" className="down">
+                                        
+                                            45.6%
+                                        
+                                        </Col>
+
+                                        <Col sm="6" className="up">
+
+                                            23.8%
+
+                                        </Col>
+
+                                    </Row>
+
+                                    </div>
+
+                                </Container>
+                                
                             </Jumbotron>
 
                         </Col>

@@ -28,7 +28,9 @@ app.use(passport.initialize());
 //app.use(passport.session());
 
 // Connect to the Mongo DB
-mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/livingDB");
+mongoose.connect(
+  process.env.MONGODB_URI || "mongodb://localhost/reactcitylist"
+);
 
 // Start the API server
 app.listen(PORT, function () {
