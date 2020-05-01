@@ -19,4 +19,36 @@
     letter-spacing: 20px;
     transition-duration: 2s;
 }
+.introSentence{
+    text-align: center;
+    font-family: 'Modak', cursive;
+    font-size: 30px;
+    margin-bottom: 50px;
+}
+.salary{
+    text-align: center;
+    font-family: 'Modak', cursive;
+    margin-top: 30px;
+    margin-bottom: 90px;
+    font-size: 70px;
+    color: #401374;
+    text-shadow: -2px 0  #000000, 0 2px  #000000, 2px 0  #000000, 0 -2px  #000000;
+}
+.sub{
+    text-align: center;
+    font-family: 'Modak', cursive;
+    font-size: 50px;
+    color: #401374;
+    text-shadow: -2px 0  #000000, 0 2px  #000000, 2px 0  #000000, 0 -2px  #000000;
+    margin-bottom: 50px;
+}
+.arrows{
+    text-align: center;
+}
+.transform{
+    transform : rotate(270deg);
+    height : 100px;
+    width: 150px;
+}
 @import url('https://fonts.googleapis.com/css2?family=Courgette&family=Fredoka+One&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=ABeeZee&family=Modak&display=swap");
