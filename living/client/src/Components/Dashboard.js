@@ -243,19 +243,19 @@ export default class Dashboard extends Component{
 
                                         <Col lg="4" className="sub">
                                         
-                                            Rent
+                                            Living Cost
 
                                         </Col>
 
                                         <Col lg="4" className="sub">
                                         
-                                            Groceries
+                                            Housing
                                         
                                         </Col>
 
                                         <Col lg="4" className="sub">
                                         
-                                            Crime Rate
+                                            Healthcare
                                         
                                         </Col>
 
@@ -265,19 +265,89 @@ export default class Dashboard extends Component{
 
                                         <Col sm="4">
 
-                                            <img src={Arrow} alt="arrow" className="transform"/>
+                                            <img src={Arrow} alt="arrow" className="transformUp"/>
 
                                         </Col>
 
                                         <Col sm="4">
 
-                                            <img src={Arrow} alt="arrow" className="transform"/>
+                                            <img src={Arrow} alt="arrow" className="transformDown"/>
 
                                         </Col>
 
                                         <Col sm="4">
 
-                                            <img src={Arrow} alt="arrow" className="transform"/>
+                                            <img src={Arrow} alt="arrow" className="transformUp"/>
+
+                                        </Col>
+
+                                    </Row>
+
+                                    <Row className="percentages">
+
+                                        <Col sm="4" className="up">
+                                        
+                                            35.4%
+                                        
+                                        </Col>
+
+                                        <Col sm="4" className="down">
+                                        
+                                            12.5%%
+                                        
+                                        </Col>
+
+                                        <Col sm="4" className="up">
+                                        
+                                            1.8%%
+                                        
+                                        </Col>
+
+                                    </Row>
+
+                                    <Row>
+
+                                        <Col sm="6" className="sub">
+                                        
+                                            Eductaion
+                                        
+                                        </Col>
+
+                                        <Col sm="6" className="sub">
+                                        
+                                            Economy
+
+                                        </Col>
+
+                                    </Row>
+
+                                    <Row className="arrows">
+
+                                        <Col sm="6">
+                                        
+                                            <img src={Arrow} alt="arrow" className="transformDown"/>
+
+                                        </Col>
+
+                                        <Col sm="6">
+                                        
+                                            <img src={Arrow} alt="arrow" className="transformUp"/>
+                                        
+                                        </Col>
+
+                                    </Row>
+
+                                    <Row className="percentages">
+
+                                        <Col sm="6" className="down">
+                                        
+                                            45.6%
+                                        
+                                        </Col>
+
+                                        <Col sm="6" className="up">
+
+                                            23.8%
 
                                         </Col>
 
