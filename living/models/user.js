@@ -7,18 +7,9 @@ const UserSchema = new Schema({
         type: String,
         unique: true,
       },*/
-  UserLogin: {
-    username: String,
-    password: String,
-    email: String,
-    bio: String,
-  },
-  notes: [
-    {
-      type: Schema.Types.ObjectId,
-      ref: "Note",
-    },
-  ],
+
+  email: String,
+  password: String,
 });
 
 const User = mongoose.model("User", UserSchema);

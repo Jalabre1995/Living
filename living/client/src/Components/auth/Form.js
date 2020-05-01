@@ -9,11 +9,11 @@ function Forms(props) {
         <Form.Group controlId="formBasicEmail">
           <Form.Label>Email address</Form.Label>
           <Form.Control
-            className="form"
+            name="email"
             type="email"
             placeholder="Enter email"
             //value={props.email}
-            onChnage={props.handleChange}
+            onChange={props.handleChange}
           />
           <Form.Text className="text-muted">
             We'll never share your email with anyone else.
@@ -23,11 +23,11 @@ function Forms(props) {
         <Form.Group controlId="formBasicPassword">
           <Form.Label>Password</Form.Label>
           <Form.Control
-            className="form"
+            name="password"
             type="password"
             placeholder="Password"
             // value={props.password}
-            onChnage={props.handleChange}
+            onChange={props.handleChange}
           />
         </Form.Group>
 
