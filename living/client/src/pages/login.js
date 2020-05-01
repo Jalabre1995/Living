@@ -3,17 +3,12 @@ import Forms from "../Components/auth/Form";
 import axios from "axios";
 
 export default class Login extends Component {
-  constructor(props) {
-    super(props);
+  state = {
+    email: "",
+    password: "",
+    loginErrors: "",
+  };
 
-    this.state = {
-      email: "",
-      password: "",
-      loginErrors: "",
-    };
-    this.handleSubmit = this.handleSubmit.bind(this);
-    this.handleChange = this.handleChange.bind(this);
-  }
   handleChange = (event) => {
     const { name, value } = event.target;
     this.setState({
