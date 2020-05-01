@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import House from './images/home.png';
+import House from './images/homeNew.png';
 import { Button } from "react-bootstrap";
 import { bounceInDown, fadeIn } from "react-animations";
 import Radium, {StyleRoot} from 'radium';
