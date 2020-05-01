@@ -10,6 +10,7 @@ mongoose.connect(
 
 const citySeed = [
     {
+        city:'',
         costofLiving: '',
         housing: '',
         safety: '',
