@@ -1,17 +1,17 @@
 import React, {Component} from 'react';
 import {Navbar, Form, FormControl, Button, Nav, Col, Row, Container, Jumbotron, Card, ListGroup} from 'react-bootstrap';
-import House from './images/home.png';
-import York from './images/yorkTown.jpg';
-import City from './images/city.jpg';
-import Bright from './images/Brightlights.jpg';
-import Nice from './images/niceCity.jpg';
-import Seattle from './images/Seattle.jpg';
-import Golden from './images/goldenGate.jpg';
-import MetLife from './images/metLife.jpg';
-import Coast from './images/coast.jpg';
-import Mountain from './images/mountain.jpg';
-import View from './images/view.jpg';
-import Arrow from './images/arrow.png';
+import House from './images/homeNew.png';
+import York from './images/yorkTownNew.jpg';
+import City from './images/cityNew.jpg';
+import Bright from './images/BrightlightsNew.jpg';
+import Nice from './images/niceCityNew.jpg';
+import Seattle from './images/SeattleNew.jpg';
+import Golden from './images/goldenGateNew.jpg';
+import MetLife from './images/metLifeNew.jpg';
+import Coast from './images/coastNew.jpg';
+import Mountain from './images/mountainNew.jpg';
+import View from './images/viewNew.jpg';
+import Arrow from './images/arrowNew.png';
 import './css/Dashboard.css';
 
 let cityList = [York,City,Bright,Nice,Seattle,Golden,Coast,MetLife,Mountain,View];
@@ -169,7 +169,7 @@ export default class Dashboard extends Component{
                         
                             <Card className="bg-dark text-white">
 
-                                <Card.Img src={cityLoad} alt="Card image" height="550px" width="1000px"/>
+                                <Card.Img src={cityLoad} alt="Card image" height="300px" width="800px"/>
 
                                 <Card.ImgOverlay>
 
