@@ -8,15 +8,7 @@ export default {
     },
     ///Get all cities
     getCities: function() {
-        return axios.get('/api/cities/');
-    },
-    ///Gets the city with the given id
-    getCity: function(id) {
-        return axios.get('/api/cities/{city_id}/')
-    },
-    ///Deletes the book with the given id
-    deleteCity: function(id) {
-        return axios.delete('/api/cities/' + id);
+        return axios.get('https://api.teleport.org/api/urban_areas/');
     },
     ///Save a city to the database////
     saveCity: function(cityData) {
