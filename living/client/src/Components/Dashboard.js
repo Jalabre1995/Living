@@ -11,7 +11,11 @@ import MetLife from './images/metLifeNew.jpg';
 import Coast from './images/coastNew.jpg';
 import Mountain from './images/mountainNew.jpg';
 import View from './images/viewNew.jpg';
-import Arrow from './images/arrowNew.png';
+import Health from './images/healthcareNew.jpg';
+import Education from './images/educationNew.jpg';
+import Rent from './images/rentNew.jpg';
+import Money from './images/moneyBagNew.png';
+import Housing from './images/blackhouseNew.jpg';
 import './css/Dashboard.css';
 
 let cityList = [York,City,Bright,Nice,Seattle,Golden,Coast,MetLife,Mountain,View];
@@ -263,23 +267,23 @@ export default class Dashboard extends Component{
 
                                     </Row>
 
-                                    <Row className="arrows">
+                                    <Row className="icons">
 
                                         <Col sm="4">
 
-                                            <img src={Arrow} alt="arrow" className="transformUp"/>
+                                            <img src={Rent} alt="arrow" className="icon" height="150px" width="150px"/>
 
                                         </Col>
 
                                         <Col sm="4">
 
-                                            <img src={Arrow} alt="arrow" className="transformDown"/>
+                                            <img src={Housing} alt="arrow" className="icon" height="150px" width="150px"/>
 
                                         </Col>
 
                                         <Col sm="4">
 
-                                            <img src={Arrow} alt="arrow" className="transformUp"/>
+                                            <img src={Health} alt="arrow" className="icon" height="150px" width="150px"/>
 
                                         </Col>
 
@@ -311,7 +315,7 @@ export default class Dashboard extends Component{
 
                                         <Col sm="6" className="sub">
                                         
-                                            Eductaion
+                                            Educataion
                                         
                                         </Col>
 
@@ -323,17 +327,17 @@ export default class Dashboard extends Component{
 
                                     </Row>
 
-                                    <Row className="arrows">
+                                    <Row className="icons">
 
                                         <Col sm="6">
                                         
-                                            <img src={Arrow} alt="arrow" className="transformDown"/>
+                                            <img src={Education} alt="arrow" className="icon" height="150px" width="150px"/>
 
                                         </Col>
 
                                         <Col sm="6">
                                         
-                                            <img src={Arrow} alt="arrow" className="transformUp"/>
+                                            <img src={Money} alt="arrow" className="icon" height="150px" width="150px"/>
                                         
                                         </Col>
 
