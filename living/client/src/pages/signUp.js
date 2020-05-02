@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-// import Forms from "../Components/auth/Form";
+import Forms from "../Components/auth/Form";
 import axios from "axios";
 
 class SignUp extends Component {
