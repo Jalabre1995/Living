@@ -4,7 +4,7 @@ const User = require("../models/user");
 const bcrypt = require("bcryptjs");
 const salt = bcrypt.genSaltSync(10);
 
-const SignUpStrategy = new Strategy({ passReqToCallback: true }, function (
+const SignUpStrategy = new Strategy({ usernameField: "email" }, function (
   email,
   password,
   done
@@ -29,6 +29,7 @@ const SignUpStrategy = new Strategy({ passReqToCallback: true }, function (
           return done(error, null);
         }
         // delete.inserted.password
+
         return done(null, inserted);
       });
     });

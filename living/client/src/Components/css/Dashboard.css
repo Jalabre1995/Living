@@ -3,15 +3,17 @@
     padding-top: 0px;
 }
 .list1{
-    background-color: #f44336;
+    background-color: #401374;
     font-weight: bold;
+    font-size: 20px ;
     font-family: 'Fredoka One', cursive;
+    color: white;
 }
 .title{
     font-size: 150px;
     text-align: center;
     font-family: "Fredoka One", cursive;
-    padding-top: 200px;
+    padding-top: 50px;
     text-shadow: -2px 0  #8750b4, 0 2px  #8750b4, 2px 0  #8750b4, 0 -2px  #8750b4;
     color:  whitesmoke;
 }
@@ -29,7 +31,7 @@
     text-align: center;
     font-family: 'Modak', cursive;
     margin-top: 30px;
-    margin-bottom: 90px;
+    margin-bottom: 70px;
     font-size: 70px;
     color: #401374;
     text-shadow: -2px 0  #000000, 0 2px  #000000, 2px 0  #000000, 0 -2px  #000000;
@@ -42,13 +44,31 @@
     text-shadow: -2px 0  #000000, 0 2px  #000000, 2px 0  #000000, 0 -2px  #000000;
     margin-bottom: 50px;
 }
-.arrows{
-    text-align: center;
+.icon{
+    border: 2px solid #401374;
+    border-radius: 20px;
 }
-.transform{
-    transform : rotate(270deg);
-    height : 100px;
-    width: 150px;
+.icons{
+    text-align: center;
+    margin-bottom: 50px;
+}
+.percentages{
+    text-align: center;
+    font-size: 50px;
+    font-family: "Fredoka One";
+    font-weight: bold;
+    margin-bottom: 75px;
+    text-shadow: -1px 0  #000000, 0 1px  #000000, 1px 0  #000000, 0 -1px  #000000;
+}
+.up{
+    color: green;
+}
+.down{
+    color: red;
+}
+.darkgray{
+    background-color: darkgray;
+    padding : 30px;
 }
 @import url('https://fonts.googleapis.com/css2?family=Courgette&family=Fredoka+One&display=swap');
-@import url("https://fonts.googleapis.com/css2?family=ABeeZee&family=Modak&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=ABeeZee&family=Modak&Bitter&display=swap");

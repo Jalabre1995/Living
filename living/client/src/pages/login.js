@@ -3,39 +3,39 @@ import Forms from "../Components/auth/Form";
 import axios from "axios";
 
 export default class Login extends Component {
-  constructor(props) {
-    super(props);
+  state = {
+    email: "",
+    password: "",
+    loginErrors: "",
+  };
 
-    this.state = {
-      email: "",
-      password: "",
-      loginErrors: "",
-    };
-    this.handleSubmit = this.handleSubmit.bind(this);
-    this.handleChange = this.handleChange.bind(this);
-  }
-  handleChange(event) {
+  handleChange = (event) => {
+    const { name, value } = event.target;
     this.setState({
-      [event.target.name]: event.target.value,
+      [name]: value,
     });
-  }
+  };
   handleSubmit = (event) => {
     event.preventDefault();
     const { email, password } = this.state;
     axios({
-      url: "/authentication/login",
+      url: "/authentication/signin",
       method: "POST",
 
-      user: {
+      data: {
         email,
         password,
       },
     })
       .then((response) => {
-        console.log("data:", response.data);
+        console.log("data:", response, this.state);
+        this.props.history.push("/Home");
       })
       .catch((error) => {
         console.log("Error:", error.response);
+        this.setState({
+          loginErrors: error.response.data.message,
+        });
       });
   };
 
@@ -45,9 +45,8 @@ export default class Login extends Component {
         <Forms
           handleSubmit={this.handleSubmit}
           handleChange={this.handleChange}
-          password={this.state.password}
-          email={this.state.email}
         />
+        <p>{this.loginErrors}</p>
       </div>
     );
   }

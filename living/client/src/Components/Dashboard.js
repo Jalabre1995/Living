@@ -1,17 +1,21 @@
 import React, {Component} from 'react';
 import {Navbar, Form, FormControl, Button, Nav, Col, Row, Container, Jumbotron, Card, ListGroup} from 'react-bootstrap';
-import House from './images/home.png';
-import York from './images/yorkTown.jpg';
-import City from './images/city.jpg';
-import Bright from './images/Brightlights.jpg';
-import Nice from './images/niceCity.jpg';
-import Seattle from './images/Seattle.jpg';
-import Golden from './images/goldenGate.jpg';
-import MetLife from './images/metLife.jpg';
-import Coast from './images/coast.jpg';
-import Mountain from './images/mountain.jpg';
-import View from './images/view.jpg';
-import Arrow from './images/arrow.png';
+import House from './images/homeNew.png';
+import York from './images/yorkTownNew.jpg';
+import City from './images/cityNew.jpg';
+import Bright from './images/BrightlightsNew.jpg';
+import Nice from './images/niceCityNew.jpg';
+import Seattle from './images/SeattleNew.jpg';
+import Golden from './images/goldenGateNew.jpg';
+import MetLife from './images/metLifeNew.jpg';
+import Coast from './images/coastNew.jpg';
+import Mountain from './images/mountainNew.jpg';
+import View from './images/viewNew.jpg';
+import Health from './images/healthcareNew.jpg';
+import Education from './images/educationNew.jpg';
+import Rent from './images/rentNew.jpg';
+import Money from './images/moneyBagNew.png';
+import Housing from './images/blackhouseNew.jpg';
 import './css/Dashboard.css';
 
 let cityList = [York,City,Bright,Nice,Seattle,Golden,Coast,MetLife,Mountain,View];
@@ -41,11 +45,11 @@ export default class Dashboard extends Component{
 
                     <Nav className="mr-auto">
 
-                        <Nav.Link href="/">Home</Nav.Link>
+                        <Nav.Link href="/home">Home</Nav.Link>
 
                         <Nav.Link href="/profile">Profile</Nav.Link>
 
-                        <Nav.Link href="/login">Login</Nav.Link>
+                        <Nav.Link href="/">Login</Nav.Link>
                    </Nav>
 
                     <Form inline>
@@ -169,7 +173,7 @@ export default class Dashboard extends Component{
                         
                             <Card className="bg-dark text-white">
 
-                                <Card.Img src={cityLoad} alt="Card image" height="500px" width="1000px"/>
+                                <Card.Img src={cityLoad} alt="Card image" height="300px" width="800px"/>
 
                                 <Card.ImgOverlay>
 
@@ -239,49 +243,123 @@ export default class Dashboard extends Component{
 
                                     </Row>
 
+                                    <div className="darkgray">
+
                                     <Row>
 
                                         <Col lg="4" className="sub">
                                         
-                                            Rent
+                                            Living Cost
 
                                         </Col>
 
                                         <Col lg="4" className="sub">
                                         
-                                            Groceries
+                                            Housing
                                         
                                         </Col>
 
                                         <Col lg="4" className="sub">
                                         
-                                            Crime Rate
+                                            Healthcare
                                         
                                         </Col>
 
                                     </Row>
 
-                                    <Row className="arrows">
+                                    <Row className="icons">
 
                                         <Col sm="4">
 
-                                            <img src={Arrow} alt="arrow" className="transform"/>
+                                            <img src={Rent} alt="arrow" className="icon" height="150px" width="150px"/>
 
                                         </Col>
 
                                         <Col sm="4">
 
-                                            <img src={Arrow} alt="arrow" className="transform"/>
+                                            <img src={Housing} alt="arrow" className="icon" height="150px" width="150px"/>
 
                                         </Col>
 
                                         <Col sm="4">
 
-                                            <img src={Arrow} alt="arrow" className="transform"/>
+                                            <img src={Health} alt="arrow" className="icon" height="150px" width="150px"/>
 
                                         </Col>
 
                                     </Row>
+
+                                    <Row className="percentages">
+
+                                        <Col sm="4" className="up">
+                                        
+                                            35.4%
+                                        
+                                        </Col>
+
+                                        <Col sm="4" className="down">
+                                        
+                                            12.5%
+                                        
+                                        </Col>
+
+                                        <Col sm="4" className="up">
+                                        
+                                            1.8%
+                                        
+                                        </Col>
+
+                                    </Row>
+
+                                    <Row>
+
+                                        <Col sm="6" className="sub">
+                                        
+                                            Educataion
+                                        
+                                        </Col>
+
+                                        <Col sm="6" className="sub">
+                                        
+                                            Economy
+
+                                        </Col>
+
+                                    </Row>
+
+                                    <Row className="icons">
+
+                                        <Col sm="6">
+                                        
+                                            <img src={Education} alt="arrow" className="icon" height="150px" width="150px"/>
+
+                                        </Col>
+
+                                        <Col sm="6">
+                                        
+                                            <img src={Money} alt="arrow" className="icon" height="150px" width="150px"/>
+                                        
+                                        </Col>
+
+                                    </Row>
+
+                                    <Row className="percentages">
+
+                                        <Col sm="6" className="down">
+                                        
+                                            45.6%
+                                        
+                                        </Col>
+
+                                        <Col sm="6" className="up">
+
+                                            23.8%
+
+                                        </Col>
+
+                                    </Row>
+
+                                    </div>
 
                                 </Container>
                                 

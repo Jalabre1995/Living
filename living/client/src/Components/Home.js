@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import House from './images/home.png';
+import House from './images/homeNew.png';
 import { Button } from "react-bootstrap";
 import { bounceInDown, fadeIn } from "react-animations";
 import Radium, {StyleRoot} from 'radium';
@@ -35,7 +35,7 @@ export default class Home extends Component {
 
             <p className="font">Welcome to the Application that will help you find the best place to live!</p>
 
-            <Button className="font btn" variant="danger">Begin Search</Button>
+            <Button className="font btn" variant="danger" href="/dashboard">Begin Search</Button>
 
             </div>
 
