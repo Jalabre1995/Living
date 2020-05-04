@@ -2,7 +2,6 @@ import React, { Component } from "react";
 
 //import Forms from "../Components/auth/Form";
 
-er
 import axios from "axios";
 
 class SignUp extends Component {
