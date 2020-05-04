@@ -1,8 +1,8 @@
 const express = require("express");
 const logger = require("morgan");
 const mongoose = require("mongoose");
-const cookieParser = require("cookie-parser");
-
+//const cookieParser = require("cookie-parser");
+const cookieSession = require("cookie-session");
 var indexRouter = require("./routes/index");
 var usersRouter = require("./routes/users");
 const app = express();
@@ -19,14 +19,20 @@ if (process.env.NODE_ENV === "production") {
 }
 // Add routes, both API and view
 
-app.use(cookieParser());
+//app.use(cookieParser());
+
+//app.use("/authentication", userRoutes);
+app.use(passport.initialize());
+app.use(passport.session());
+app.use(
+  cookieSession({
+    name: "session",
+    keys: ["key1", "key2"],
+  })
+);
 
 app.use("/", indexRouter);
 app.use("/authentication", usersRouter);
-//app.use("/authentication", userRoutes);
-app.use(passport.initialize());
-//app.use(passport.session());
-
 // Connect to the Mongo DB
 mongoose.connect(
   process.env.MONGODB_URI || "mongodb://localhost/reactcitylist"
