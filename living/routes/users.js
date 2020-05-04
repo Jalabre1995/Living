@@ -47,6 +47,10 @@ router.post("/signin", (req, res, next) => {
       return res.json(user);
     });
   })(req, res, next);
+
+  /*router.get("logout", (req, res, next ) => {
+    if (err)
+  }) */
 });
 
 module.exports = router;
