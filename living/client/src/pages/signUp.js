@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import Forms from "../Components/auth/Form";
+//import Forms from "../Components/auth/Form";
 import axios from "axios";
 
 class SignUp extends Component {
@@ -11,7 +11,6 @@ class SignUp extends Component {
 
   handleChange = (event) => {
     const { name, value } = event.target;
-    console.log(name, value);
 
     this.setState({
       [name]: value,
@@ -19,8 +18,8 @@ class SignUp extends Component {
   };
   handleSubmit = (event) => {
     event.preventDefault();
+
     const { email, password } = this.state;
-    console.log(email, password);
 
     axios({
       url: "/authentication/signup",
@@ -32,11 +31,14 @@ class SignUp extends Component {
       },
     })
       .then((response) => {
-        console.log("data:", response, this.state);
+        // console.log("data:", response, this.state);
         this.props.history.push("/Home");
       })
       .catch((error) => {
-        console.log("Error", error.response);
+        //  console.log("Error", error.response);
+        this.setState({
+          loginErrors: error.response.data.message,
+        });
       });
   };
 
