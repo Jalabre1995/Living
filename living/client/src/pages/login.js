@@ -28,7 +28,7 @@ export default class Login extends Component {
       },
     })
       .then((response) => {
-        console.log("data:", response, this.state);
+        //console.log("data:", response, this.state);
         this.props.history.push("/Home");
       })
       .catch((error) => {
@@ -46,7 +46,9 @@ export default class Login extends Component {
           handleSubmit={this.handleSubmit}
           handleChange={this.handleChange}
         />
-        <p>{this.loginErrors}</p>
+        <div>
+          <h1 className="text-center">{this.state.loginErrors}</h1>
+        </div>
       </div>
     );
   }
