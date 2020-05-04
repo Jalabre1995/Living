@@ -78,6 +78,9 @@ class SignUp extends Component {
             <button className="FormField__Button mr-20">Sign Up</button>
           </div>
         </form>
+        <div>
+          <h1 className="text-center">{this.state.loginErrors}</h1>
+        </div>
       </div>
     );
   }

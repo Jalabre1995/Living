@@ -16,7 +16,7 @@ const SignUpStrategy = new Strategy({ usernameField: "email" }, function (
         return done(err, null);
       }
       if (user) {
-        return done("user already exits", null);
+        return done("User already exists", null);
       }
       const encryptedPassword = bcrypt.hashSync(password, salt);
       let newUser = new User({
