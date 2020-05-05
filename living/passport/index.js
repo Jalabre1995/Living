@@ -1,5 +1,19 @@
 const passport = require("passport");
-//const connection = require("../connection");
+const User = require("../models/user");
+
+passport.serializeUser(function (user, done) {
+  done(null, user.email);
+});
+
+passport.deserializeUser(function (id, done) {
+  User.findOne({ email })
+    .lean()
+    .exec((err, user) => {
+      done(err, user);
+    });
+});
+
+//import all the strategies
 const SignUpStrategy = require("./SignUpStrategy");
 const LoginStrategy = require("./LoginStrategy");
 //const GoogleStrategy = require("./GoogleStrategy");

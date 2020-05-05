@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import Forms from "../Components/auth/Form";
 import axios from "axios";
+import { Redirect } from "react-router-dom";
 
 export default class Login extends Component {
   state = {
@@ -28,11 +29,12 @@ export default class Login extends Component {
       },
     })
       .then((response) => {
-        console.log("data:", response, this.state);
+        console.log("data:", response);
+        const isAuthenticated = response.data.isAuthenticated;
+        window.localStorage.setItem("isAuthenticated", isAuthenticated);
         this.props.history.push("/Home");
       })
       .catch((error) => {
-        console.log("Error:", error.response);
         this.setState({
           loginErrors: error.response.data.message,
         });
@@ -40,13 +42,19 @@ export default class Login extends Component {
   };
 
   render() {
+    const isAuthenticated = window.localStorage.getItem("isAuthenticated");
+    if (isAuthenticated) {
+      return <Redirect to="/Home" />;
+    }
     return (
       <div>
         <Forms
           handleSubmit={this.handleSubmit}
           handleChange={this.handleChange}
         />
-        <p>{this.loginErrors}</p>
+        <div>
+          <h1 className="text-center">{this.state.loginErrors}</h1>
+        </div>
       </div>
     );
   }
