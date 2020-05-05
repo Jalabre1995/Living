@@ -43,7 +43,7 @@ export default class Login extends Component {
 
   render() {
     const isAuthenticated = window.localStorage.getItem("isAuthenticated");
-    if (isAuthenticated) {
+    if (!isAuthenticated) {
       return <Redirect to="/Home" />;
     }
     return (

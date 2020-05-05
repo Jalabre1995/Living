@@ -2,6 +2,14 @@ const express = require("express");
 const router = express.Router();
 const passport = require("../passport");
 
+router.get("/logout", (req, res) => {
+  console.log("hi");
+
+  req.logout();
+  req.session = null;
+  res.redirect("/");
+});
+
 router.post("/signup", (req, res, next) => {
   //passport cb
   passport.authenticate("local-signup", function (error, user, info) {
@@ -47,10 +55,6 @@ router.post("/signin", (req, res, next) => {
       return res.json(user);
     });
   })(req, res, next);
-
-  /*router.get("logout", (req, res, next ) => {
-    if (err)
-  }) */
 });
 
 module.exports = router;
