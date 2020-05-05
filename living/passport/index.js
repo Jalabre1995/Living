@@ -5,7 +5,7 @@ passport.serializeUser(function (user, done) {
   done(null, user.email);
 });
 
-passport.deserializeUser(function (id, done) {
+passport.deserializeUser(function (email, done) {
   User.findOne({ email })
     .lean()
     .exec((err, user) => {
