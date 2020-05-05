@@ -11,7 +11,11 @@ import MetLife from './images/metLifeNew.jpg';
 import Coast from './images/coastNew.jpg';
 import Mountain from './images/mountainNew.jpg';
 import View from './images/viewNew.jpg';
-import Arrow from './images/arrowNew.png';
+import Rent from './images/house-clipart.jpg';
+import Money from './images/moneybag.jpg';
+import Health from './images/health.png';
+import School from './images/school.jpg';
+import Economy from './images/econ.png';
 import './css/Dashboard.css';
 
 let cityList = [York,City,Bright,Nice,Seattle,Golden,Coast,MetLife,Mountain,View];
@@ -263,23 +267,23 @@ export default class Dashboard extends Component{
 
                                     </Row>
 
-                                    <Row className="arrows">
+                                    <Row className="icons">
 
                                         <Col sm="4">
 
-                                            <img src={Arrow} alt="arrow" className="transformUp"/>
+                                            <img src={Money} alt="Living" className="icon" height="150px" width="175px"/>
 
                                         </Col>
 
                                         <Col sm="4">
 
-                                            <img src={Arrow} alt="arrow" className="transformDown"/>
+                                            <img src={Rent} alt="Housing" className="icon" height="150px" width="175px"/>
 
                                         </Col>
 
                                         <Col sm="4">
 
-                                            <img src={Arrow} alt="arrow" className="transformUp"/>
+                                            <img src={Health} alt="arrow" className="icon" height="150px" width="175px"/>
 
                                         </Col>
 
@@ -323,17 +327,17 @@ export default class Dashboard extends Component{
 
                                     </Row>
 
-                                    <Row className="arrows">
+                                    <Row className="icons">
 
                                         <Col sm="6">
                                         
-                                            <img src={Arrow} alt="arrow" className="transformDown"/>
+                                            <img src={School} alt="arrow" className="icon" height="150px" width="175px"/>
 
                                         </Col>
 
                                         <Col sm="6">
                                         
-                                            <img src={Arrow} alt="arrow" className="transformUp"/>
+                                            <img src={Economy} alt="arrow" className="icon" height="150px" width="175px"/>
                                         
                                         </Col>
 

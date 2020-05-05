@@ -44,7 +44,7 @@
     text-shadow: -2px 0  #000000, 0 2px  #000000, 2px 0  #000000, 0 -2px  #000000;
     margin-bottom: 50px;
 }
-.arrows{
+.icons{
     text-align: center;
     margin-bottom: 50px;
 }
@@ -56,15 +56,10 @@
     margin-bottom: 75px;
     text-shadow: -1px 0  #000000, 0 1px  #000000, 1px 0  #000000, 0 -1px  #000000;
 }
-.transformUp{
-    transform : rotate(270deg);
-    height : 100px;
-    width: 150px;
-}
-.transformDown{
-    transform: rotate(90deg);
-    height : 100px;
-    width : 150px;
+.icon{
+    background-color:white;
+    border: solid 3px #401374;
+    border-radius: 10px;
 }
 .up{
     color: green;
