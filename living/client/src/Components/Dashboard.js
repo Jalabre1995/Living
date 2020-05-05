@@ -1,44 +1,25 @@
-import React, { Component } from "react";
+import React, {Component} from 'react';
+import {Navbar, Form, FormControl, Button, Nav, Col, Row, Container, Jumbotron, Card, ListGroup} from 'react-bootstrap';
+import House from './images/homeNew.png';
+import York from './images/yorkTownNew.jpg';
+import City from './images/cityNew.jpg';
+import Bright from './images/BrightlightsNew.jpg';
+import Nice from './images/niceCityNew.jpg';
+import Seattle from './images/SeattleNew.jpg';
+import Golden from './images/goldenGateNew.jpg';
+import MetLife from './images/metLifeNew.jpg';
+import Coast from './images/coastNew.jpg';
+import Mountain from './images/mountainNew.jpg';
+import View from './images/viewNew.jpg';
+import Rent from './images/house-clipart.jpg';
+import Money from './images/moneybag.jpg';
+import Health from './images/health.png';
+import School from './images/school.jpg';
+import Economy from './images/econ.png';
+import './css/Dashboard.css';
 
-import {
-  Navbar,
-  Form,
-  FormControl,
-  Button,
-  Nav,
-  Col,
-  Row,
-  Container,
-  Jumbotron,
-  Card,
-  ListGroup,
-} from "react-bootstrap";
-import House from "./images/homeNew.png";
-import York from "./images/yorkTownNew.jpg";
-import City from "./images/cityNew.jpg";
-import Bright from "./images/BrightlightsNew.jpg";
-import Nice from "./images/niceCityNew.jpg";
-import Seattle from "./images/SeattleNew.jpg";
-import Golden from "./images/goldenGateNew.jpg";
-import MetLife from "./images/metLifeNew.jpg";
-import Coast from "./images/coastNew.jpg";
-import Mountain from "./images/mountainNew.jpg";
-import View from "./images/viewNew.jpg";
-import Arrow from "./images/arrowNew.png";
-import "./css/Dashboard.css";
+let cityList = [York,City,Bright,Nice,Seattle,Golden,Coast,MetLife,Mountain,View];
 
-let cityList = [
-  York,
-  City,
-  Bright,
-  Nice,
-  Seattle,
-  Golden,
-  Coast,
-  MetLife,
-  Mountain,
-  View,
-];
 let cityLoad = cityList[Math.floor(Math.random() * cityList.length)];
 
 export default class Dashboard extends Component {
@@ -200,124 +181,186 @@ export default class Dashboard extends Component {
 
         <Container fluid>
           <Row>
-            <Col sm="2">
-              <Card style={{ width: "18rem" }}>
-                <ListGroup variant="flush">
-                  <ListGroup.Item className="list1">
-                    Past Searches
-                  </ListGroup.Item>
+            
 
-                  <ListGroup.Item>Miami</ListGroup.Item>
+                        <Col sm="2">
 
-                  <ListGroup.Item>Houston</ListGroup.Item>
+                            <Card style={{ width: '18rem' }}>
 
-                  <ListGroup.Item>Las Vegas</ListGroup.Item>
+                                <ListGroup variant="flush">
 
-                  <ListGroup.Item>Seattle</ListGroup.Item>
+                                    <ListGroup.Item className="list1">Past Searches</ListGroup.Item>
 
-                  <ListGroup.Item>Washington</ListGroup.Item>
-                </ListGroup>
-              </Card>
-            </Col>
+                                    <ListGroup.Item>Miami</ListGroup.Item>
 
-            <Col sm="10">
-              <Jumbotron>
-                <Container className="output">
-                  <Row>
-                    <Col sm="12" className="introSentence">
-                      Living in "new city", your new salary will be estimated at
-                      about...
-                    </Col>
-                  </Row>
+                                    <ListGroup.Item>Houston</ListGroup.Item>
 
-                  <Row>
-                    <Col sm="12" className="salary">
-                      "$123,000"
-                    </Col>
-                  </Row>
+                                    <ListGroup.Item>Las Vegas</ListGroup.Item>
 
-                  <div className="darkgray">
-                    <Row>
-                      <Col lg="4" className="sub">
-                        Living Cost
-                      </Col>
+                                    <ListGroup.Item>Seattle</ListGroup.Item>
 
-                      <Col lg="4" className="sub">
-                        Housing
-                      </Col>
+                                    <ListGroup.Item>Washington</ListGroup.Item>
 
-                      <Col lg="4" className="sub">
-                        Healthcare
-                      </Col>
-                    </Row>
+                                </ListGroup>
 
-                    <Row className="arrows">
-                      <Col sm="4">
-                        <img src={Arrow} alt="arrow" className="transformUp" />
-                      </Col>
+                            </Card>
 
-                      <Col sm="4">
-                        <img
-                          src={Arrow}
-                          alt="arrow"
-                          className="transformDown"
-                        />
-                      </Col>
+                        </Col>
 
-                      <Col sm="4">
-                        <img src={Arrow} alt="arrow" className="transformUp" />
-                      </Col>
-                    </Row>
+                        <Col sm="10">
 
-                    <Row className="percentages">
-                      <Col sm="4" className="up">
-                        35.4%
-                      </Col>
+                            <Jumbotron>
 
-                      <Col sm="4" className="down">
-                        12.5%
-                      </Col>
+                                <Container className="output">
 
-                      <Col sm="4" className="up">
-                        1.8%
-                      </Col>
-                    </Row>
+                                    <Row>
 
-                    <Row>
-                      <Col sm="6" className="sub">
-                        Eductaion
-                      </Col>
+                                        <Col sm="12" className="introSentence">
+                                        
+                                            Living in "new city", your new salary will be estimated at about...
+                                        
+                                        </Col>
 
-                      <Col sm="6" className="sub">
-                        Economy
-                      </Col>
-                    </Row>
+                                    </Row>
 
-                    <Row className="arrows">
-                      <Col sm="6">
-                        <img
-                          src={Arrow}
-                          alt="arrow"
-                          className="transformDown"
-                        />
-                      </Col>
+                                    <Row>
 
-                      <Col sm="6">
-                        <img src={Arrow} alt="arrow" className="transformUp" />
-                      </Col>
-                    </Row>
+                                        <Col sm="12" className="salary">
+                                        
+                                            "$123,000"
+                                        
+                                        </Col>
 
-                    <Row className="percentages">
-                      <Col sm="6" className="down">
-                        45.6%
-                      </Col>
+                                    </Row>
 
-                      <Col sm="6" className="up">
-                        23.8%
-                      </Col>
-                    </Row>
-                  </div>
-                </Container>
+                                    <div className="darkgray">
+
+                                    <Row>
+
+                                        <Col lg="4" className="sub">
+                                        
+                                            Living Cost
+
+                                        </Col>
+
+                                        <Col lg="4" className="sub">
+                                        
+                                            Housing
+                                        
+                                        </Col>
+
+                                        <Col lg="4" className="sub">
+                                        
+                                            Healthcare
+                                        
+                                        </Col>
+
+                                    </Row>
+
+                                    <Row className="icons">
+
+                                        <Col sm="4">
+
+                                            <img src={Money} alt="Living" className="icon" height="150px" width="175px"/>
+
+                                        </Col>
+
+                                        <Col sm="4">
+
+                                            <img src={Rent} alt="Housing" className="icon" height="150px" width="175px"/>
+
+                                        </Col>
+
+                                        <Col sm="4">
+
+                                            <img src={Health} alt="arrow" className="icon" height="150px" width="175px"/>
+
+                                        </Col>
+
+                                    </Row>
+
+                                    <Row className="percentages">
+
+                                        <Col sm="4" className="up">
+                                        
+                                            35.4%
+                                        
+                                        </Col>
+
+                                        <Col sm="4" className="down">
+                                        
+                                            12.5%
+                                        
+                                        </Col>
+
+                                        <Col sm="4" className="up">
+                                        
+                                            1.8%
+                                        
+                                        </Col>
+
+                                    </Row>
+
+                                    <Row>
+
+                                        <Col sm="6" className="sub">
+                                        
+                                            Eductaion
+                                        
+                                        </Col>
+
+                                        <Col sm="6" className="sub">
+                                        
+                                            Economy
+
+                                        </Col>
+
+                                    </Row>
+
+                                    <Row className="icons">
+
+                                        <Col sm="6">
+                                        
+                                            <img src={School} alt="arrow" className="icon" height="150px" width="175px"/>
+
+                                        </Col>
+
+                                        <Col sm="6">
+                                        
+                                            <img src={Economy} alt="arrow" className="icon" height="150px" width="175px"/>
+                                        
+                                        </Col>
+
+                                    </Row>
+
+                                    <Row className="percentages">
+
+                                        <Col sm="6" className="down">
+                                        
+                                            45.6%
+                                        
+                                        </Col>
+
+                                        <Col sm="6" className="up">
+
+                                            23.8%
+
+                                        </Col>
+
+                                    </Row>
+
+                                    </div>
+
+                 
+
+          
+
+             
+
+             
+
+                   
+             </Container>
               </Jumbotron>
             </Col>
           </Row>
