@@ -286,7 +286,6 @@ let cityLoad = cityList[Math.floor(Math.random() * cityList.length)];
                                         </Col>
 
                                         <Col lg="4" className="sub">
-                                           
                                             Housing
                                         
                                             {result.categories ? result.categories[0].score_out_of_10: null}
@@ -294,10 +293,8 @@ let cityLoad = cityList[Math.floor(Math.random() * cityList.length)];
                                         </Col>
 
                                         <Col lg="4" className="sub">
-                                           
-                                            Healthcare
                                         
-                                         {result.categories ? result.categories[8].score_out_of_10: null}
+                                            {result.categories ? result.categories[8].score_out_of_10: null}
                                         
                                         </Col>
 
