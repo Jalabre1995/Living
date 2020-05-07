@@ -5,7 +5,7 @@ const citySchema = new Schema({
   city: { type: String, required: true },
   costOfLiving: { type: String, required: true },
   housing: { type: String, required: true},
-  safety: { type: String, required: truw},
+  safety: { type: String, required: true},
   healthCare: { type: String, required: true},
   education: { type: String, required: true},
   economy: { type: String, required: true},

@@ -1,4 +1,4 @@
-import React, {Component} from 'react';
+import React, { useState} from 'react';
 import {Navbar, Form, FormControl, Button, Nav, Col, Row, Container, Jumbotron, Card, ListGroup} from 'react-bootstrap';
 import House from './images/homeNew.png';
 import York from './images/yorkTownNew.jpg';
@@ -13,13 +13,44 @@ import Mountain from './images/mountainNew.jpg';
 import View from './images/viewNew.jpg';
 import Arrow from './images/arrowNew.png';
 import './css/Dashboard.css';
+import API from '../utils/API';
+
+
+
 
 let cityList = [York,City,Bright,Nice,Seattle,Golden,Coast,MetLife,Mountain,View];
 let cityLoad = cityList[Math.floor(Math.random() * cityList.length)];
 
-export default class Dashboard extends Component{
 
-    render(){
+   function CitySearch() {
+       const [search,setSearch] = useState('');
+       const [result, setResult] = useState({})
+       
+       function CityCall() {
+           if(!search) {
+               return;
+           }
+           API.getNewYork(search) 
+           .then(res =>{
+               if(res.data.length === 0) {
+                   throw new Error('No result found');
+               }
+               if(res.data.status === 'error') {
+                   throw new Error(res.data.message);
+               }
+               setResult(res.data)
+               console.log(res.data)
+           })
+           .catch(err => (err));
+       }
+       
+      
+
+       
+   
+
+    
+
 
         return(
 
@@ -50,8 +81,9 @@ export default class Dashboard extends Component{
 
                     <Form inline>
 
-                        <FormControl as="select" placeholder="Search" className="mr-sm-2">
-
+                        <FormControl as="select" placeholder="Search" className="mr-sm-2" input = 'search' onChange= {e => setSearch(e.target.value)} >
+                        
+                            
                             <option>Search City</option>
                             <option>New York, NY</option>
                             <option>San Francisco, CA</option>
@@ -156,7 +188,8 @@ export default class Dashboard extends Component{
 
                         </FormControl>
 
-                        <Button variant="outline-danger">Search</Button>
+                        <Button variant="outline-danger" onClick = {CityCall}  >Search</Button>
+                        
 
                     </Form>
                 </Navbar>
@@ -231,9 +264,10 @@ export default class Dashboard extends Component{
 
                                     <Row>
 
-                                        <Col sm="12" className="salary">
+                                        <Col sm="12" className="salary" >
                                         
-                                            "$123,000"
+                                        {result.salary}
+                                            
                                         
                                         </Col>
 
@@ -244,20 +278,26 @@ export default class Dashboard extends Component{
                                     <Row>
 
                                         <Col lg="4" className="sub">
+                                            Cost of Living
                                         
-                                            Living Cost
+                                            {result.categories ? result.categories[1].score_out_of_10 : null}
+                                            
 
                                         </Col>
 
                                         <Col lg="4" className="sub">
-                                        
+                                           
                                             Housing
                                         
+                                            {result.categories ? result.categories[0].score_out_of_10: null}
+                                        
                                         </Col>
 
                                         <Col lg="4" className="sub">
-                                        
+                                           
                                             Healthcare
+                                        
+                                         {result.categories ? result.categories[8].score_out_of_10: null}
                                         
                                         </Col>
 
@@ -289,7 +329,7 @@ export default class Dashboard extends Component{
 
                                         <Col sm="4" className="up">
                                         
-                                            35.4%
+                                        23.7%
                                         
                                         </Col>
 
@@ -310,14 +350,16 @@ export default class Dashboard extends Component{
                                     <Row>
 
                                         <Col sm="6" className="sub">
+                                            Education
                                         
-                                            Eductaion
+                                            {result.categories ? result.categories[9].score_out_of_10: null}
                                         
                                         </Col>
 
                                         <Col sm="6" className="sub">
-                                        
                                             Economy
+                                        
+                                            {result.categories ? result.categories[11].score_out_of_10: null}
 
                                         </Col>
 
@@ -371,6 +413,10 @@ export default class Dashboard extends Component{
 
         )
 
-    }
+    
 
-}
+   }
+
+
+
+export default CitySearch;
