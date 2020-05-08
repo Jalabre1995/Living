@@ -17,7 +17,6 @@ import API from '../utils/API';
 
 
 
-
 let cityList = [York,City,Bright,Nice,Seattle,Golden,Coast,MetLife,Mountain,View];
 let cityLoad = cityList[Math.floor(Math.random() * cityList.length)];
 
