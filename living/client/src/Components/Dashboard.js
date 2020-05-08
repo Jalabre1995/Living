@@ -104,56 +104,56 @@ function CitySearch() {
             onChange={(e) => setSearch(e.target.value)}
           >
            <option>Search City</option>
-                            <option value = 'New York'>new-york</option>
-                            <option value = 'San Francisco Bay Area'>san-francisco-bay-area</option>
-                            <option value = 'Boston'>boston</option>
-                            <option value = 'Washington DC'>washington-dc</option>
-                            <option value = 'Miami'>miami</option>
-                            <option value = 'Chicago'>chicago</option>
-                            <option value = 'Seattle'>seattle</option>
-                            <option value = 'Philadelphia'>philadelphia</option>
-                            <option value = 'Minneapolis Saint Paul'>minneapolis-saint-paul</option>
-                            <option value = 'Portland Oregon'>portland-or</option>
-                            <option value = 'Honolulu'>honolulu</option>
-                            <option value = 'Baltimore'>baltimore</option>
-                            <option value = 'Pittsburgh'>pittsburgh</option>
-                            <option value = 'Atlanta'>atlanta</option>
-                            <option value = 'Madison'>madison</option>
-                            <option value = 'Denver '>denver</option>
-                            <option value = 'Los Angeles'>los-angeles</option>
-                            <option value = 'San Jose'>san-jose</option>
-                            <option value = 'Milwaukee'>milwaukee</option>
-                            <option value = 'St. Louis'>st-louis</option>
-                            <option value = 'Buffalo'>buffalo</option>
-                            <option value = 'Austin'>austin</option>
-                            <option value = 'Ausin '>san-diego</option>
-                            <option value = 'Cleveland'>cleveland</option>
-                            <option value = 'New Orleans'>new-orleans</option>
-                            <option value = 'Orlando'>orlando</option>
-                            <option value = 'Charlotte'>charlotte</option>
-                            <option value = 'Cincinnati'>cincinnati</option>
-                            <option value = 'Tampa Bay Area'>tampa-bay-area</option>
-                            <option value = 'Houston'>houston</option>
-                            <option value = 'Dallas'>dallas</option>
-                            <option value = 'Omaha'>omaha</option>
-                            <option value = 'Columbus'>columbus</option>
-                            <option value = 'Boise'>boise</option>
-                            <option value = 'Nashville'>nashville</option>
-                            <option value = 'Detroit'>detroit</option>
-                            <option value = 'Las Vegas'>las-vegas</option>
-                            <option value = 'Raleigh'>raleigh</option>
-                            <option value = 'Kansas City'>kansas-city</option>
-                            <option value = 'Indianapolis'>indianapolis</option>
-                            <option value = 'Albquerque'>albuquerque</option>
-                            <option value = 'Anchorage'>anchorage</option>
-                            <option value = 'San Antonio'>san-antonio</option>
-                            <option value = 'Birmingham'>birmingham-al</option>
-                            <option value = 'Phoenix'>phoenix</option>
-                            <option value = 'Lousiville'>lousiville</option>
-                            <option value = 'Colorado Springs'>colorado-springs</option>
-                            <option value = 'Jacksonville'>jacksonville</option>
-                            <option value = 'Memphis'>memphis</option>
-                            <option value = 'Oklohoma City' >oklahoma-city</option>
+                            <option >new-york</option>
+                            <option >san-francisco-bay-area</option>
+                            <option >boston</option>
+                            <option >washington-dc</option>
+                            <option >miami</option>
+                            <option >chicago</option>
+                            <option >seattle</option>
+                            <option >philadelphia</option>
+                            <option >minneapolis-saint-paul</option>
+                            <option >portland-or</option>
+                            <option >honolulu</option>
+                            <option >baltimore</option>
+                            <option >pittsburgh</option>
+                            <option >atlanta</option>
+                            <option >madison</option>
+                            <option >denver</option>
+                            <option >los-angeles</option>
+                            <option >san-jose</option>
+                            <option >milwaukee</option>
+                            <option >st-louis</option>
+                            <option >buffalo</option>
+                            <option >austin</option>
+                            <option >san-diego</option>
+                            <option >cleveland</option>
+                            <option >new-orleans</option>
+                            <option >orlando</option>
+                            <option >charlotte</option>
+                            <option >cincinnati</option>
+                            <option >tampa-bay-area</option>
+                            <option >houston</option>
+                            <option >dallas</option>
+                            <option >omaha</option>
+                            <option >columbus</option>
+                            <option >boise</option>
+                            <option >nashville</option>
+                            <option >detroit</option>
+                            <option >las-vegas</option>
+                            <option >raleigh</option>
+                            <option >kansas-city</option>
+                            <option >indianapolis</option>
+                            <option >albuquerque</option>
+                            <option >anchorage</option>
+                            <option >san-antonio</option>
+                            <option >birmingham-al</option>
+                            <option >phoenix</option>
+                            <option >lousiville</option>
+                            <option >colorado-springs</option>
+                            <option >jacksonville</option>
+                            <option >memphis</option>
+                            <option  >oklahoma-city</option>
           </FormControl>
 
           <Button variant="outline-danger" onClick={CityCall}>
