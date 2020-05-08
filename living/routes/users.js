@@ -3,11 +3,9 @@ const router = express.Router();
 const passport = require("../passport");
 
 router.get("/logout", (req, res) => {
-  console.log("hi");
-
   req.logout();
   req.session = null;
-  res.redirect("/");
+  res.redirect("http://localhost:3000");
 });
 
 router.post("/signup", (req, res, next) => {
@@ -20,7 +18,7 @@ router.post("/signup", (req, res, next) => {
     }
 
     //Persistent Login
-    req.login(user, (error) => {
+    req.logIn(user, function (error) {
       if (error) {
         return res.status(500).json({
           message: error || "Ooops something happened!",
@@ -43,13 +41,14 @@ router.post("/signin", (req, res, next) => {
     }
 
     //Persistent Login
-    req.login(user, (error) => {
+    req.logIn(user, function (error) {
       if (error) {
+        console.log(error);
+
         return res.status(500).json({
           message: error || "Ooops something happened!",
         });
       }
-      console.log(req.session);
 
       user.isAuthenticated = true;
       return res.json(user);
