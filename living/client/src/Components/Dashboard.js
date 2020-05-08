@@ -50,6 +50,7 @@ function CitySearch() {
   const [result, setResult] = useState({});
 
   function CityCall() {
+
     if (!search) {
       return;
     }
@@ -102,106 +103,106 @@ function CitySearch() {
             onChange={(e) => setSearch(e.target.value)}
           >
             <option>Search City</option>
-            <option>New York, NY</option>
-            <option>San Francisco, CA</option>
-            <option>Boston, MA</option>
-            <option>Jersey City, NJ</option>
-            <option>Washington, DC</option>
-            <option>Miami, FL</option>
-            <option>Chicago, IL</option>
-            <option>Seattle, WA</option>
-            <option>Philadelphia, PA</option>
-            <option>Minneapolis, MN</option>
-            <option>Portland, OR</option>
-            <option>Honolulu, HI</option>
-            <option>Newark, NJ</option>
-            <option>Baltimore, MD</option>
-            <option>Pittsburgh, PA</option>
-            <option>Atlanta, GA</option>
-            <option>Oakland, CA</option>
-            <option>Madison, WI</option>
-            <option>Denver, CO</option>
-            <option>Los Angeles, CA</option>
-            <option>San Jose, CA</option>
-            <option>Sacramento, CA</option>
-            <option>Milwaukee, WI</option>
-            <option>St. Louis, MO</option>
-            <option>Buffalo, NY</option>
-            <option>Austin, TX</option>
-            <option>San Diego, CA</option>
-            <option>Cleveland, OH</option>
-            <option>New Orleans, LA</option>
-            <option>Orlando, FL</option>
-            <option>St. Paul, MN</option>
-            <option>Long Beach, CA</option>
-            <option>Charlotte, NC</option>
-            <option>Santa Ana, CA</option>
-            <option>Cincinnati, OH</option>
-            <option>Tampa, FL</option>
-            <option>Houston, TX</option>
-            <option>Dallas, TX</option>
-            <option>Norfolk, VA</option>
-            <option>Lincoln, NE</option>
-            <option>Omaha, NE</option>
-            <option>Columbus, OH</option>
-            <option>Anaheim, CA</option>
-            <option>Boise, ID</option>
-            <option>Reno, NV</option>
-            <option>Nashville, TN</option>
-            <option>Detroit, MI</option>
-            <option>Irvine, CA</option>
-            <option>Winston-Salem, NC</option>
-            <option>Las Vegas, NV</option>
-            <option>Raleigh, NC</option>
-            <option>Fresno, CA</option>
-            <option>Tucson, AZ</option>
-            <option>Fremont, CA</option>
-            <option>Kansas City, MO</option>
-            <option>Indianapolis, IN</option>
-            <option>Stockton, CA</option>
-            <option>Durham, NC</option>
-            <option>Alburquerque, NM</option>
-            <option>Lexington, KY</option>
-            <option>Laredo, TX</option>
-            <option>Fort Worth, TX</option>
-            <option>Anchorage, AK</option>
-            <option>Hialeah, FL</option>
-            <option>San Antonio, TX</option>
-            <option>Birmingham, AL</option>
-            <option>Phoenix, AZ</option>
-            <option>Greensboro, NC</option>
-            <option>Lousiville, KY</option>
-            <option>Riverside, CA</option>
-            <option>Lubbock, TX</option>
-            <option>Bakersfield, CA</option>
-            <option>Chula Vista, CA</option>
-            <option>Fort Wayne, IND</option>
-            <option>Colorado Springs, CO</option>
-            <option>Plano, TX</option>
-            <option>El Paso, TX</option>
-            <option>Jacksonville, FL</option>
-            <option>Corpus Christi, TX</option>
-            <option>Memphis, TN</option>
-            <option>Wichita, KS</option>
-            <option>St. Petersburg, FL</option>
-            <option>Oklahoma City, OK</option>
-            <option>Toledo, OH</option>
-            <option>Baton Rouge, LA</option>
-            <option>Irving, TX</option>
-            <option>Tulsa, OK</option>
-            <option>Chandler, AZ</option>
-            <option>Scottsdale, AZ</option>
-            <option>San Bernardino, CA</option>
-            <option>Mesa, AZ</option>
-            <option>Garland, TX</option>
-            <option>Gilbert, AZ</option>
-            <option>Henderson, NV</option>
-            <option>Arlington, TX</option>
-            <option>Glendale, AZ</option>
-            <option>Aurora, CO</option>
-            <option>Virginia Beach, VA</option>
-            <option>Cheasapeake, VA</option>
-            <option>North Las Vegas, NV</option>
+            <option value="New York">New York, NY</option>
+            <option value="San Francisco">San Francisco, CA</option>
+            <option value="Boston">Boston, MA</option>
+            <option value="Jersey City">Jersey City, NJ</option>
+            <option value="Washington">Washington, DC</option>
+            <option value="Miami">Miami, FL</option>
+            <option value="Chicago">Chicago, IL</option>
+            <option value="Seattle">Seattle, WA</option>
+            <option value="Philadelphia">Philadelphia, PA</option>
+            <option value="Minneapolis">Minneapolis, MN</option>
+            <option value="Portland">Portland, OR</option>
+            <option value="Honolulu">Honolulu, HI</option>
+            <option value="Newark">Newark, NJ</option>
+            <option value="Baltimore">Baltimore, MD</option>
+            <option value="Pittsburgh">Pittsburgh, PA</option>
+            <option value="Atlanta">Atlanta, GA</option>
+            <option value="Oakland">Oakland, CA</option>
+            <option value="Madison">Madison, WI</option>
+            <option value="Denver">Denver, CO</option>
+            <option value="Los Angeles">Los Angeles, CA</option>
+            <option value="San Jose">San Jose, CA</option>
+            <option value="Sacramento">Sacramento, CA</option>
+            <option value="Milwaukee">Milwaukee, WI</option>
+            <option value="St. Louis">St. Louis, MO</option>
+            <option value="Buffalo">Buffalo, NY</option>
+            <option value="Austin">Austin, TX</option>
+            <option value="San Diego">San Diego, CA</option>
+            <option value="Cleveland">Cleveland, OH</option>
+            <option value="New Orleans">New Orleans, LA</option>
+            <option value="Orlando">Orlando, FL</option>
+            <option value="St. Paul">St. Paul, MN</option>
+            <option value="Long Beach">Long Beach, CA</option>
+            <option value="Charlotte">Charlotte, NC</option>
+            <option value="Santa Ana">Santa Ana, CA</option>
+            <option value="Cincinnati">Cincinnati, OH</option>
+            <option value="Tampa">Tampa, FL</option>
+            <option value="Houston">Houston, TX</option>
+            <option value="Dallas">Dallas, TX</option>
+            <option value="Norfolk">Norfolk, VA</option>
+            <option value="Lincoln">Lincoln, NE</option>
+            <option value="Omaha">Omaha, NE</option>
+            <option value="Columbus">Columbus, OH</option>
+            <option value="Anaheim">Anaheim, CA</option>
+            <option value="Boise">Boise, ID</option>
+            <option value="Reno">Reno, NV</option>
+            <option value="Nashville">Nashville, TN</option>
+            <option value="Detroit">Detroit, MI</option>
+            <option value="Irvine">Irvine, CA</option>
+            <option value="Winston-Salem">Winston-Salem, NC</option>
+            <option value="Las Vegas">Las Vegas, NV</option>
+            <option value="Raleigh">Raleigh, NC</option>
+            <option value="Fresno">Fresno, CA</option>
+            <option value="Tucson">Tucson, AZ</option>
+            <option value="Fremont">Fremont, CA</option>
+            <option value="Kansas City">Kansas City, MO</option>
+            <option value="Indianapolis">Indianapolis, IN</option>
+            <option value="Stockton">Stockton, CA</option>
+            <option value="Durham">Durham, NC</option>
+            <option value="Alburquerque">Alburquerque, NM</option>
+            <option value="Lexington">Lexington, KY</option>
+            <option value="Laredo">Laredo, TX</option>
+            <option value="Fort Worth">Fort Worth, TX</option>
+            <option value="Anchorage">Anchorage, AK</option>
+            <option value="Hialeah">Hialeah, FL</option>
+            <option value="San Antonio">San Antonio, TX</option>
+            <option value="Birmingham">Birmingham, AL</option>
+            <option value="Phoenix">Phoenix, AZ</option>
+            <option value="Greensboro">Greensboro, NC</option>
+            <option value="Louisville">Lousiville, KY</option>
+            <option value="Riverside">Riverside, CA</option>
+            <option value="Lubbock">Lubbock, TX</option>
+            <option value="Bakersfield">Bakersfield, CA</option>
+            <option value="Chula Vista">Chula Vista, CA</option>
+            <option value="Fort Wayne">Fort Wayne, IND</option>
+            <option value="Colorado Springs">Colorado Springs, CO</option>
+            <option value="Plano">Plano, TX</option>
+            <option value="El Paso">El Paso, TX</option>
+            <option value="Jacksonville">Jacksonville, FL</option>
+            <option value="Corpus Christi">Corpus Christi, TX</option>
+            <option value="Memphis">Memphis, TN</option>
+            <option value="Wichita">Wichita, KS</option>
+            <option value="St. Petersburg">St. Petersburg, FL</option>
+            <option value="Oklahoma City">Oklahoma City, OK</option>
+            <option value="Toledo">Toledo, OH</option>
+            <option value="Baton Rouge">Baton Rouge, LA</option>
+            <option value="Irving">Irving, TX</option>
+            <option value="Tulsa">Tulsa, OK</option>
+            <option value="Chandler">Chandler, AZ</option>
+            <option value="Scottsdale">Scottsdale, AZ</option>
+            <option value="San Bernadino">San Bernardino, CA</option>
+            <option value="Mesa">Mesa, AZ</option>
+            <option value="Garland">Garland, TX</option>
+            <option value="Gilbert">Gilbert, AZ</option>
+            <option value="Henderson">Henderson, NV</option>
+            <option value="Arlington">Arlington, TX</option>
+            <option vlaue="Glendale">Glendale, AZ</option>
+            <option value="Aurora">Aurora, CO</option>
+            <option value="Virgina Beach">Virginia Beach, VA</option>
+            <option value="Cheasapeake">Cheasapeake, VA</option>
+            <option value="North Las Vegas">North Las Vegas, NV</option>
           </FormControl>
 
           <Button variant="outline-danger" onClick={CityCall}>
@@ -271,23 +272,14 @@ function CitySearch() {
                   <Row>
                     <Col lg="4" className="sub">
                       Living Cost
-                      {result.categories
-                        ? result.categories[1].score_out_of_10
-                        : null}
                     </Col>
 
                     <Col lg="4" className="sub">
                       Housing
-                      {result.categories
-                        ? result.categories[0].score_out_of_10
-                        : null}
                     </Col>
 
                     <Col lg="4" className="sub">
                       Healthcare
-                      {result.categories
-                        ? result.categories[8].score_out_of_10
-                        : null}
                     </Col>
                   </Row>
 
@@ -325,31 +317,33 @@ function CitySearch() {
 
                   <Row className="percentages">
                     <Col sm="4" className="up">
-                      23.7%
-                    </Col>
-
-                    <Col sm="4" className="down">
-                      12.5%
+                    {result.categories
+                        ? result.categories[1].score_out_of_10
+                        : null}%
                     </Col>
 
                     <Col sm="4" className="up">
-                      1.8%
+                    {result.categories
+                        ? result.categories[0].score_out_of_10
+                        : null}%
+                    </Col>
+
+                    <Col sm="4" className="up">
+                    {result.categories
+                        ? result.categories[8].score_out_of_10
+                        : null}%
                     </Col>
                   </Row>
 
                   <Row>
                     <Col sm="6" className="sub">
                       Education
-                      {result.categories
-                        ? result.categories[9].score_out_of_10
-                        : null}
+                    
                     </Col>
 
                     <Col sm="6" className="sub">
                       Economy
-                      {result.categories
-                        ? result.categories[11].score_out_of_10
-                        : null}
+                  
                     </Col>
                   </Row>
 
@@ -376,12 +370,16 @@ function CitySearch() {
                   </Row>
 
                   <Row className="percentages">
-                    <Col sm="6" className="down">
-                      45.6%
+                    <Col sm="6" className="up">
+                    {result.categories
+                        ? result.categories[9].score_out_of_10
+                        : null}%
                     </Col>
 
                     <Col sm="6" className="up">
-                      23.8%
+                    {result.categories
+                        ? result.categories[11].score_out_of_10
+                        : null}%
                     </Col>
                   </Row>
                 </div>
