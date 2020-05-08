@@ -25,6 +25,7 @@ if (process.env.NODE_ENV === "production") {
 
 app.use(
   cookieSession({
+    // maxAge: 24 * 60 * 60 * 100,
     name: "session",
     keys: ["key1", "key2"],
   })
