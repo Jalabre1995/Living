@@ -2,14 +2,17 @@ const passport = require("passport");
 const User = require("../models/user");
 
 passport.serializeUser(function (user, done) {
-  done(null, user.email);
+  done(null, user._id);
 });
 
-passport.deserializeUser(function (email, done) {
-  User.findOne({ email })
+passport.deserializeUser(function (id, done) {
+  User.findOne({ id })
     .lean()
-    .exec((err, user) => {
-      done(err, user);
+    .exec((error, user) => {
+      if (error) {
+        return done(err, null);
+      }
+      return done(null, user);
     });
 });
 

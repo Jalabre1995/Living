@@ -35,15 +35,18 @@ export default class Login extends Component {
         this.props.history.push("/Home");
       })
       .catch((error) => {
+        console.log(error.response.data);
+
         this.setState({
-          loginErrors: error.response.data.message,
+          loginErrors: error.response.data.message || "error occurred ",
         });
       });
   };
 
   render() {
     const isAuthenticated = window.localStorage.getItem("isAuthenticated");
-    if (!isAuthenticated) {
+
+    if (isAuthenticated) {
       return <Redirect to="/Home" />;
     }
     return (
