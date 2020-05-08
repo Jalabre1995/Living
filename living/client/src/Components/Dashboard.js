@@ -175,7 +175,7 @@ function CitySearch() {
 
               <Card.ImgOverlay>
                 <Card.Title>
-                  <div className="title">Living.js</div>
+                  <div className="title">Living</div>
                 </Card.Title>
               </Card.ImgOverlay>
             </Card>
@@ -268,21 +268,21 @@ function CitySearch() {
 
                   <Row className="percentages">
                     <Col sm="4" className="up">
-                    {result.categories
+                    { Math.floor(result.categories 
                         ? result.categories[1].score_out_of_10
-                        : null}%
+                        : null) * 10 }%
                     </Col>
 
                     <Col sm="4" className="up">
-                    {result.categories
+                    { Math.floor(result.categories 
                         ? result.categories[0].score_out_of_10
-                        : null}%
+                        : null) * 10 }%
                     </Col>
 
                     <Col sm="4" className="up">
-                    {result.categories
+                    { Math.floor(result.categories
                         ? result.categories[8].score_out_of_10
-                        : null}%
+                        : null) * 10}%
                     </Col>
                   </Row>
 
@@ -322,15 +322,15 @@ function CitySearch() {
 
                   <Row className="percentages">
                     <Col sm="6" className="up">
-                    {result.categories
+                    { Math.floor(result.categories
                         ? result.categories[9].score_out_of_10
-                        : null}%
+                        : null) * 10 }%
                     </Col>
 
                     <Col sm="6" className="up">
-                    {result.categories
+                    {Math.floor(result.categories
                         ? result.categories[11].score_out_of_10
-                        : null}%
+                        : null) * 10}%
                     </Col>
                   </Row>
                 </div>
