@@ -11,7 +11,11 @@ import MetLife from './images/metLifeNew.jpg';
 import Coast from './images/coastNew.jpg';
 import Mountain from './images/mountainNew.jpg';
 import View from './images/viewNew.jpg';
-import Arrow from './images/arrowNew.png';
+import Rent from './images/house-clipart.jpg';
+import Money from './images/moneybag.jpg';
+import Health from './images/health.png';
+import Book from './images/school.jpg';
+import Econ from './images/econ.png';
 import './css/Dashboard.css';
 import API from '../utils/API';
 
@@ -277,7 +281,7 @@ let cityLoad = cityList[Math.floor(Math.random() * cityList.length)];
                                     <Row>
 
                                         <Col lg="4" className="sub">
-                                            Cost of Living
+                                            Living Cost
                                         
                                             {result.categories ? result.categories[1].score_out_of_10 : null}
                                             
@@ -292,6 +296,8 @@ let cityLoad = cityList[Math.floor(Math.random() * cityList.length)];
                                         </Col>
 
                                         <Col lg="4" className="sub">
+
+                                            Healthcare
                                         
                                             {result.categories ? result.categories[8].score_out_of_10: null}
                                         
@@ -299,23 +305,23 @@ let cityLoad = cityList[Math.floor(Math.random() * cityList.length)];
 
                                     </Row>
 
-                                    <Row className="arrows">
+                                    <Row className="icons">
 
                                         <Col sm="4">
 
-                                            <img src={Arrow} alt="arrow" className="transformUp"/>
+                                            <img src={Money} alt="arrow" className="icon" height="150px" width="150px"/>
 
                                         </Col>
 
                                         <Col sm="4">
 
-                                            <img src={Arrow} alt="arrow" className="transformDown"/>
+                                            <img src={Rent} alt="arrow" className="icon" height="150px" width="150px"/>
 
                                         </Col>
 
                                         <Col sm="4">
 
-                                            <img src={Arrow} alt="arrow" className="transformUp"/>
+                                            <img src={Health} alt="arrow" className="icon" height="150px" width="150px"/>
 
                                         </Col>
 
@@ -361,17 +367,17 @@ let cityLoad = cityList[Math.floor(Math.random() * cityList.length)];
 
                                     </Row>
 
-                                    <Row className="arrows">
+                                    <Row className="icons">
 
                                         <Col sm="6">
                                         
-                                            <img src={Arrow} alt="arrow" className="transformDown"/>
+                                            <img src={Book} alt="arrow" className="icon" height="150px" width="150px"/>
 
                                         </Col>
 
                                         <Col sm="6">
                                         
-                                            <img src={Arrow} alt="arrow" className="transformUp"/>
+                                            <img src={Econ} alt="arrow" className="icon" height="150px" width="150px"/>
                                         
                                         </Col>
 
