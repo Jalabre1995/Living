@@ -49,11 +49,14 @@ let cityLoad = cityList[Math.floor(Math.random() * cityList.length)];
 function CitySearch() {
   const [search, setSearch] = useState("");
   const [result, setResult] = useState({});
+  const [search2, setSearch2] = useState("");
+  const [result2, setResult2] = useState({});
 
   function CityCall() {
 
     if (!search) {
       return;
+    
     }
     API.getNewYork(search)
       .then((res) => {
@@ -67,6 +70,20 @@ function CitySearch() {
         console.log(res.data);
       })
       .catch((err) => err);
+
+      API.getNewYork(search2)
+      .then((res) => {
+        if (res.data.length === 0) {
+          throw new Error("No result found");
+        }
+        if (res.data.status === "error") {
+          throw new Error(res.data.message);
+        }
+        setResult2(res.data);
+        console.log(res.data);
+      })
+      .catch((err) => err);
+      
   }
   function Logout() {
     window.location.href = "http://localhost:3001/authentication/logout";
@@ -98,12 +115,12 @@ function CitySearch() {
         <Form inline>
           <FormControl
             as="select"
-            placeholder="Search"
+            placeholder="search"
             className="mr-sm-2"
             input="search"
             onChange={(e) => setSearch(e.target.value)}
           >
-           <option>Search City</option>
+           <option>Current City</option>
                             <option >new-york</option>
                             <option >san-francisco-bay-area</option>
                             <option >boston</option>
@@ -156,19 +173,17 @@ function CitySearch() {
                             <option  >oklahoma-city</option>
           </FormControl>
 
-          <Button variant="outline-danger" onClick={CityCall}>
-            Search
-          </Button>
+         
         </Form>
         <Form inline>
           <FormControl
             as="select"
-            placeholder="Search"
+            placeholder="search"
             className="mr-sm-2"
             input="search"
-            onChange={(e) => setSearch(e.target.value)}
+            onChange={(e) => setSearch2(e.target.value)}
           >
-           <option>Search City</option>
+           <option>New City</option>
                             <option >new-york</option>
                             <option >san-francisco-bay-area</option>
                             <option >boston</option>
@@ -273,8 +288,7 @@ function CitySearch() {
               <Container className="output">
                 <Row>
                   <Col sm="12" className="introSentence">
-                    Living in "new city", your new salary will be estimated at
-                    about...
+                  Maintaining you current salary, this is how far you can expect your expenses to be impacted ....
                   </Col>
                 </Row>
 
@@ -335,21 +349,22 @@ function CitySearch() {
                     <Col sm="4" className="up">
                     { Math.floor(result.categories 
                         ? result.categories[1].score_out_of_10
-                        : null) * 10 }%
+                        : null) * 10 - Math.floor(result2.categories ? result2.categories[1].score_out_of_10: null) * 10}% 
                     </Col>
 
                     <Col sm="4" className="up">
                     { Math.floor(result.categories 
                         ? result.categories[0].score_out_of_10
-                        : null) * 10 }%
+                        : null) * 10 - Math.floor(result2.categories ? result2.categories[0].score_out_of_10: null) * 10}%
                     </Col>
 
                     <Col sm="4" className="up">
                     { Math.floor(result.categories
                         ? result.categories[8].score_out_of_10
-                        : null) * 10}%
+                        : null) * 10 - Math.floor(result2.categories ? result2.categories[8].score_out_of_10: null)* 10}%
                     </Col>
                   </Row>
+                  
 
                   <Row>
                     <Col sm="6" className="sub">
@@ -389,12 +404,90 @@ function CitySearch() {
                     <Col sm="6" className="up">
                     { Math.floor(result.categories
                         ? result.categories[9].score_out_of_10
-                        : null) * 10 }%
+                        : null) * 10 - Math.floor(result2.categories ? result2.categories[9].score_out_of_10: null) * 10}%
                     </Col>
 
                     <Col sm="6" className="up">
                     {Math.floor(result.categories
                         ? result.categories[11].score_out_of_10
+                        : null) *10 - Math.floor(result2.categories ? result2.categories[11].score_out_of_10: null) * 10}%
+                    </Col>
+                  </Row>
+                </div>
+              </Container>
+              <Container className="output">
+                <Row>
+                  <Col sm="12" className="introSentence">
+                   New City
+                  </Col>
+                </Row>
+
+                <Row>
+                  <Col sm="12" className="salary">
+                    {result.salary}
+                  </Col>
+                </Row>
+
+                <div className="darkgray">
+                  <Row>
+                    <Col lg="4" className="sub">
+                      Living Cost
+                    </Col>
+
+                    <Col lg="4" className="sub">
+                      Housing
+                    </Col>
+
+                    <Col lg="4" className="sub">
+                      Healthcare
+                    </Col>
+                  </Row>
+
+                  
+
+                  <Row className="percentages">
+                    <Col sm="4" className="up">
+                    { Math.floor(result2.categories 
+                        ? result2.categories[1].score_out_of_10
+                        : null) * 10  }%  
+                    </Col>
+
+                    <Col sm="4" className="up">
+                    { Math.floor(result2.categories 
+                        ? result2.categories[0].score_out_of_10
+                        : null) * 10 }%
+                    </Col>
+
+                    <Col sm="4" className="up">
+                    { Math.floor(result2.categories
+                        ? result2.categories[8].score_out_of_10
+                        : null) * 10}%
+                    </Col>
+                  </Row>
+
+                  <Row>
+                    <Col sm="6" className="sub">
+                      Education
+                    
+                    </Col>
+
+                    <Col sm="6" className="sub">
+                      Economy
+                  
+                    </Col>
+                  </Row>
+
+
+                  <Row className="percentages">
+                    <Col sm="6" className="up">
+                    { Math.floor(result2.categories
+                        ? result2.categories[9].score_out_of_10
+                        : null) * 10 }%
+                    </Col>
+
+                    <Col sm="6" className="up">
+                    {Math.floor(result2.categories
+                        ? result2.categories[11].score_out_of_10
                         : null) *10}%
                     </Col>
                   </Row>
