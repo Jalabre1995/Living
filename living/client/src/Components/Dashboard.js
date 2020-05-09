@@ -84,7 +84,7 @@ function CitySearch() {
             height="30"
             className="d-inline-block align-top"
           />
-          {"Living.js"}
+          {"Living"}
         </Navbar.Brand>
 
         <Nav className="mr-auto">
@@ -161,6 +161,72 @@ function CitySearch() {
           </Button>
         </Form>
       </Navbar>
+      <Form inline>
+          <FormControl
+            as="select"
+            placeholder="Search"
+            className="mr-sm-2"
+            input="search"
+            onChange={(e) => setSearch(e.target.value)}
+          >
+           <option>Search City</option>
+                            <option >new-york</option>
+                            <option >san-francisco-bay-area</option>
+                            <option >boston</option>
+                            <option >washington-dc</option>
+                            <option >miami</option>
+                            <option >chicago</option>
+                            <option >seattle</option>
+                            <option >philadelphia</option>
+                            <option >minneapolis-saint-paul</option>
+                            <option >portland-or</option>
+                            <option >honolulu</option>
+                            <option >baltimore</option>
+                            <option >pittsburgh</option>
+                            <option >atlanta</option>
+                            <option >madison</option>
+                            <option >denver</option>
+                            <option >los-angeles</option>
+                            <option >san-jose</option>
+                            <option >milwaukee</option>
+                            <option >st-louis</option>
+                            <option >buffalo</option>
+                            <option >austin</option>
+                            <option >san-diego</option>
+                            <option >cleveland</option>
+                            <option >new-orleans</option>
+                            <option >orlando</option>
+                            <option >charlotte</option>
+                            <option >cincinnati</option>
+                            <option >tampa-bay-area</option>
+                            <option >houston</option>
+                            <option >dallas</option>
+                            <option >omaha</option>
+                            <option >columbus</option>
+                            <option >boise</option>
+                            <option >nashville</option>
+                            <option >detroit</option>
+                            <option >las-vegas</option>
+                            <option >raleigh</option>
+                            <option >kansas-city</option>
+                            <option >indianapolis</option>
+                            <option >albuquerque</option>
+                            <option >anchorage</option>
+                            <option >san-antonio</option>
+                            <option >birmingham-al</option>
+                            <option >phoenix</option>
+                            <option >lousiville</option>
+                            <option >colorado-springs</option>
+                            <option >jacksonville</option>
+                            <option >memphis</option>
+                            <option  >oklahoma-city</option>
+          </FormControl>
+
+          <Button variant="outline-danger" onClick={CityCall}>
+            Search
+          </Button>
+        </Form>
+      
 
       <Container>
         <Row>
@@ -330,7 +396,7 @@ function CitySearch() {
                     <Col sm="6" className="up">
                     {Math.floor(result.categories
                         ? result.categories[11].score_out_of_10
-                        : null) * 10}%
+                        : null) *10}%
                     </Col>
                   </Row>
                 </div>
