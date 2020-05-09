@@ -160,8 +160,7 @@ function CitySearch() {
             Search
           </Button>
         </Form>
-      </Navbar>
-      <Form inline>
+        <Form inline>
           <FormControl
             as="select"
             placeholder="Search"
@@ -226,7 +225,7 @@ function CitySearch() {
             Search
           </Button>
         </Form>
-      
+      </Navbar>
 
       <Container>
         <Row>
