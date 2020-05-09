@@ -4,7 +4,7 @@ As a person moving across the country, this application allows for the user to l
 
 ## Description
 
-Once in the application the user will be able to make use of our search functions, that will be powered by the census’s CitySDK found here https://uscensusbureau.github.io/citysdk/
+Once in the application the user will be able to make use of our search functions, that will be powered by the census’s CitySDK found here https://developers.teleport.org/api/
 
 Using this SDK our application will have access to information on population, percentage of people living in poverty, employment statistics, average income, and average cost of housing.
 
